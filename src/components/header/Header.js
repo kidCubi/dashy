@@ -18,7 +18,8 @@ class Header extends Component {
     render() {
         return (
             <div className={styles.Wrapper}>
-                <p>Header</p>
+                <span className={styles.HeaderMenu}></span>
+                <span className={styles.HeaderIcon}></span>
                 <span className={styles.DragTrigger} onClick={this.triggerDrag}></span>
             </div>
         );

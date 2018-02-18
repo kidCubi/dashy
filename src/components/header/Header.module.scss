@@ -4,12 +4,32 @@
 .Wrapper {
   height: 80px;
   width: 100%;
-  background: red;
+  background: $c-blue0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.HeaderMenu {
+  height: 18px;
+  width: 18px;
+  background: url('../../assets/svg/menuIcon.svg') no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.HeaderIcon {
+  height: 55px;
+  width: 55px;
+  background: url('../../assets/img/dashy-icn.png') no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 .DragTrigger {
-  height: 50px;
-  width: 50px;
-  background: blue;
-  display: block;
+  height: 15px;
+  width: 15px;
+  background: url('../../assets/svg/plusSign.svg') no-repeat;
+  background-position: center center;
+  background-size: cover;
 }

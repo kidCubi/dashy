@@ -1,16 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { kelvinToCelcius, getWeekDay } from "../../helpers";
+import { WEEK_DAYS } from "../../const";
 
-class _COMPONENT extends Component {
-    constructor() {
-        super();
-        console.log('_COMPONENT')
-    }
-
-    render() {
+const Day = (props) => {
+    const temp = Math.round(kelvinToCelcius(props.data.main.temp));
+    const day = WEEK_DAYS[getWeekDay(props.data.dt)].substr(0, 3);
+    if (props.index === 0) {
         return (
-            <p> _COMPONENT </p>
-        );
+            <div>
+                <span className={props.data.weather[0].main}></span>
+                <span>{temp}°</span>
+            </div>
+        )
+    } else {
+        return (
+            <div>
+                <span>{day}</span>
+                <span className={props.data.weather[0].main}></span>
+                <span>{temp}°</span>
+            </div>
+        )
     }
-}
+};
 
-export default _COMPONENT;
+export default Day;

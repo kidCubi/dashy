@@ -19,16 +19,16 @@
 
 .IconToday {
   height: 100%;
-  width: 28px;
+  width: 31px;
   font-size: 4vw;
   position: relative;
   text-align: center; }
   .IconToday:before {
     content: '';
     position: absolute;
-    height: 25px;
+    height: 27px;
     width: inherit;
-    top: -4px;
+    top: -5px;
     left: 1px;
     background: url("../../assets/svg/calendar.svg") no-repeat left top;
     background-size: cover; }

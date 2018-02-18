@@ -7,3 +7,102 @@
 /**
  * from https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
  */
+.Wrapper {
+  color: #FFFFFF;
+  padding-bottom: 30px; }
+
+.Heading {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  position: relative; }
+  .Heading:after {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 1px;
+    background: #509A9B;
+    bottom: -21px;
+    opacity: 0.5; }
+
+.HeadingTemp {
+  font-size: 3.7em;
+  margin-left: 10px; }
+
+.HeadingIcn {
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  transform: scale(0.8); }
+
+.HeadingCity {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 1.1em;
+  margin-top: 10px; }
+
+.ForecastContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  height: 23px;
+  margin: 2px auto; }
+
+.ForecastDay {
+  text-transform: uppercase;
+  font-size: 3.5vw; }
+
+.ForecastTemp {
+  font-size: 3.5vw; }
+
+.WeatherIcon {
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+  transform: scale(0.3); }
+
+.Clear {
+  height: 70px;
+  width: 70px;
+  background-image: url("../../assets/sprites/sun.png");
+  background-position: left center;
+  background-size: cover;
+  animation: playSprite 3s infinite steps(211); }
+
+.Snow {
+  height: 70px;
+  width: 70px;
+  background-image: url("../../assets/sprites/snow.png");
+  background-position: left center;
+  background-size: cover;
+  animation: playSprite 3s infinite steps(211); }
+
+.Clouds {
+  height: 70px;
+  width: 70px;
+  background-image: url("../../assets/sprites/clouds.png");
+  background-position: left center;
+  background-size: cover;
+  animation: playSprite 3s infinite steps(211); }
+
+.Rain {
+  height: 70px;
+  width: 70px;
+  background-image: url("../../assets/sprites/rain.png");
+  background-position: left center;
+  background-size: cover;
+  animation: playSnow 3s infinite steps(211); }
+
+@keyframes playSprite {
+  0% {
+    background-position: 0; }
+  100% {
+    background-position: -14770px; } }

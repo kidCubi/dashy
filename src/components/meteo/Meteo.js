@@ -33,7 +33,10 @@ class Meteo extends Component {
                 this.forecastData.push(weatherData.list[0], weatherData.list[8], weatherData.list[16], weatherData.list[24], weatherData.list[32]);
                 for (let i = 0; i < 5; i++) {
                     this.indents.push(<Day
-                        data={this.forecastData[i]}
+                        city={this.cityName}
+                        temp={this.forecastData[i].main.temp}
+                        day={this.forecastData[i].dt}
+                        weather={this.forecastData[i].weather[0].main}
                         index={i}
                         key={i}
                     />);
@@ -46,10 +49,7 @@ class Meteo extends Component {
         return (
             <div className={styles.Wrapper}>
                 {this.props.app.meteoLoaded &&
-                <div>
-                    <h1>{this.cityName}</h1>
                     <div>{this.indents}</div>
-                </div>
                 }
                 {this.props.children}
             </div>

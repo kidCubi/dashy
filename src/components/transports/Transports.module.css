@@ -8,4 +8,50 @@
  * from https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
  */
 .Wrapper {
-  color: white; }
+  color: white;
+  margin: 0 8px;
+  padding-bottom: 30px; }
+
+.Heading {
+  margin-top: 10px;
+  margin-bottom: 15px; }
+  .Heading span {
+    display: inline-block;
+    font-size: 6vw; }
+
+.HeadingIcon {
+  height: 26px;
+  width: 24px;
+  background: url("../../assets/svg/busIcon.svg") no-repeat center center;
+  background-size: cover;
+  position: relative;
+  top: 4px;
+  margin-right: 10px; }
+
+.Entry {
+  background: rgba(255, 255, 255, 0.1);
+  max-height: 53px;
+  padding-left: 4px;
+  padding-top: 7px;
+  padding-bottom: 6px;
+  position: relative;
+  margin-bottom: 6px;
+  border-left: 1px solid #FF3365; }
+  .Entry:last-of-type {
+    margin-bottom: 0; }
+
+.Number {
+  font-size: 2.8vw;
+  border: 1px solid #FFFFFF;
+  border-radius: 25%;
+  padding: 1px 3px;
+  min-width: 20px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin-right: 10px; }
+
+.Time {
+  display: block;
+  margin-top: 10px;
+  font-size: 4vw; }

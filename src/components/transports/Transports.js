@@ -30,6 +30,7 @@ class Transports extends Component {
                         number={data.stationboard[i].category + data.stationboard[i].number}
                         destination={data.stationboard[i].to}
                         departure={data.stationboard[i].stop.departureTimestamp}
+                        index={i}
                         key={i}
                     />)
                 }

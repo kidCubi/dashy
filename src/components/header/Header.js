@@ -9,11 +9,8 @@ class Header extends Component {
         this.triggerDrag = this.triggerDrag.bind(this);
     }
 
-    componentDidMount() {
-    }
-
     triggerDrag() {
-        (this.props.draggieInst.isEnabled) ? this.props.draggieInst.disable() : this.props.draggieInst.enable();
+        // (this.props.draggieInst.isEnabled) ? this.props.draggieInst.disable() : this.props.draggieInst.enable();
         console.log(this.props.draggieInst.isEnabled)
     }
 

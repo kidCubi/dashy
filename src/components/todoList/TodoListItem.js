@@ -14,14 +14,13 @@ class TodoListItem extends Component {
 
     render() {
         const classes = classNames(
-            { [styles.isChecked]: this.props.item.done },
+            styles.TodoItem,
+            { [styles.isChecked]: this.props.item.complete },
         );
         return (
             <li className={classes}>
-                <div className={this.props.item.done ? "done" : "undone"}>
-                    <span aria-hidden="true" onClick={this.checkTask}></span>
-                    {this.props.item.value}
-                </div>
+                <span className={styles.CheckInput} aria-hidden="true" onClick={this.checkTask}></span>
+                <span className={styles.TodoTask}>  {this.props.item.value}</span>
             </li>
         );
     }

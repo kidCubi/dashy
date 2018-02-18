@@ -23,7 +23,9 @@ class TodoList extends Component {
             { value: "do stuff", complete: false },
         ];
         this.state = {
-            count: this.todoItems.filter( s => { return !s.complete; }).length,
+            count: this.todoItems.filter(s => {
+                return !s.complete;
+            }).length,
         }
     }
 
@@ -34,7 +36,9 @@ class TodoList extends Component {
     checkItem(index) {
         this.todoItems[index].complete = !this.todoItems[index].complete;
         this.setState(state => ({
-            count: this.todoItems.filter( s => { return !s.complete; }).length
+            count: this.todoItems.filter(s => {
+                return !s.complete;
+            }).length
         }));
     }
 
@@ -46,9 +50,12 @@ class TodoList extends Component {
         });
         return (
             <div className={styles.Wrapper}>
-                <span>{this.state.count}</span>
+                <div className={styles.Heading}>
+                    <span className={styles.HeadingIcon}></span>
+                    <span>{this.state.count} left</span>
+                </div>
                 {this.props.app.todoLoaded &&
-                <ul className="list-group"> {items} </ul>
+                <ul> {items} </ul>
                 }
                 {this.props.children}
             </div>

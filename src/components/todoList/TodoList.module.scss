@@ -3,17 +3,61 @@
 
 .Wrapper {
   color: white;
+  margin: 0 8px;
+  padding-bottom: 30px;
+}
+
+.Heading {
+  margin-top: 10px;
+  margin-bottom: 15px;
   span {
-    background: red;
-    height: 30px;
-    width: 30px;
     display: inline-block;
-    cursor: pointer;
+    font-size: 7vw;
   }
 }
 
+.HeadingIcon {
+  height: 25px;
+  width: 25px;
+  background: url('../../assets/svg/checkIcon.svg') no-repeat center center;
+  background-size: cover;
+  margin-right: 5px;
+  top: 2px;
+  position: relative;
+}
+
+.TodoItem {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid $c-green0;
+  &:first-of-type {
+    padding-top: 0;
+  }
+  &:last-of-type {
+    padding-bottom: 0;
+    border: none;
+  }
+}
+
+.CheckInput {
+  width: 23px;
+  height: 23px;
+  margin-right: 10px;
+  border: 1px solid $c-white;
+  border-radius: 50%;
+  display: inline-block;
+}
+
 .isChecked {
- span {
-   background-color: blue !important;
- }
+  span:first-of-type {
+    background-color: $c-lightOrange;
+  }
+  span:last-of-type {
+    opacity: 0.5;
+  }
+}
+
+.TodoTask {
+
 }

@@ -22,20 +22,15 @@ const LineChart = (props) => {
     }))
     .range([0, w]);
 
-
     const y = d3.scaleLinear()
         .domain([0, d3.max(props.data, function (d) {
             return d.amount;
         })])
         .range([h, 0]);
 
-    const yAxis = d3.axisLeft(y).ticks(4);
+    const yAxis = d3.axisLeft(y).ticks(3);
 
-    const xAxis = d3.axisBottom(x).tickValues(() => {
-        props.data.map((d) => {
-            return d.day;
-        }).splice(1)
-    }).ticks(5);
+    const xAxis = d3.axisBottom(x).ticks(5);
 
     const line = d3.line()
         .x(function (d) {
@@ -43,7 +38,7 @@ const LineChart = (props) => {
         })
         .y(function (d) {
             return y(d.amount);
-        });
+        }).curve(d3.curveCardinal);
 
     const transform = 'translate(' + margin.left + ',' + margin.top + ')';
 
@@ -73,7 +68,6 @@ const LineChart = (props) => {
                     })
                 }
             </g>
-
         </svg>
     );
 };

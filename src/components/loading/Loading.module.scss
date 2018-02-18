@@ -1,0 +1,36 @@
+@import '../../sass/helpers/mixins';
+@import '../../sass/helpers/variables';
+
+.Wrapper {
+  height: 100%;
+  width: 100%;
+  background: $c-blue0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  display: flex;
+  transform: scale(1);
+  opacity: 1;
+  transition: all 0.9s $easeOutCubic;
+}
+
+.Logo {
+  height: 55px;
+  width: 55px;
+  margin: auto;
+  background: url("../../assets/img/dashy-icn.png") no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.HasLoaded {
+  transform: scale(1.2);
+  opacity: 0;
+}
+
+.LoadingDone {
+  display: none;
+}

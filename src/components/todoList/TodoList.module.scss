@@ -49,15 +49,41 @@
   display: inline-block;
 }
 
+.TodoTask {
+  position: relative;
+  &:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 6px;
+    width: 100%;
+    height: 1px;
+    background-color: $c-lightOrange;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s $easeOutCubic;
+  }
+}
+
 .isChecked {
   span:first-of-type {
     background-color: $c-lightOrange;
+    &:before {
+      content: '';
+      position: absolute;
+      height: inherit;
+      width: inherit;
+      background: url('../../assets/svg/singleTick.svg') no-repeat center center;
+      background-size: 60%;
+    }
   }
   span:last-of-type {
     opacity: 0.5;
+    &:after {
+      content: '';
+      position: absolute;
+      transform: scaleX(1);
+    }
   }
 }
 
-.TodoTask {
-
-}

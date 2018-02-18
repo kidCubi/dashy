@@ -5,6 +5,8 @@ import styles from './App.scss';
 import Packery from 'packery';
 import Draggabilly from 'draggabilly';
 
+
+import Loading from './components/loading/Loading';
 import Header from './components/header/Header';
 import Meteo from './components/meteo/Meteo';
 import Agenda from './components/agenda/Agenda';
@@ -24,7 +26,8 @@ class App extends Component {
         this.initDraggableGrid = this.initDraggableGrid.bind(this);
         this.draggie = null;
         this.state = {
-            draggieLoaded: false
+            draggieLoaded: false,
+            hasLoaded: false
         }
     }
 
@@ -46,18 +49,19 @@ class App extends Component {
             percentPosition: true,
             stagger: 30
         });
-        pckry.element.childNodes.forEach((item, index) => {
-            this.draggie = new Draggabilly(item, {
-                containment: this.refMainGrid,
-            });
-            pckry.bindDraggabillyEvents(this.draggie);
-            this.draggie.disable();
-            if (( pckry.element.childNodes.length - 1) === index) {
+        // pckry.element.childNodes.forEach((item, index) => {
+        //     this.draggie = new Draggabilly(item, {
+        //         containment: this.refMainGrid,
+        //     });
+            // pckry.bindDraggabillyEvents(this.draggie);
+            // this.draggie.disable();
+            // if (( pckry.element.childNodes.length - 1) === index) {
                 this.setState(state => ({
-                    draggieLoaded: true
+                    draggieLoaded: true,
+                    hasLoaded: true
                 }));
-            }
-        });
+        //     }
+        // });
     }
 
     render() {
@@ -78,6 +82,9 @@ class App extends Component {
         );
         return (
             <div>
+                <Loading
+                    hasLoaded={this.state.hasLoaded}
+                />
                 {this.state.draggieLoaded &&
                 <Header
                     draggieInst={this.draggie}
@@ -92,14 +99,14 @@ class App extends Component {
                     <div className={smallOrange}>
                         <Agenda/>
                     </div>
+                    <div className={largeGreen}>
+                        <Money/>
+                    </div>
                     <div className={smallOrange}>
                         <Transports/>
                     </div>
                     <div className={smallGreen}>
                         <TodoList/>
-                    </div>
-                    <div className={largeGreen}>
-                        <Money/>
                     </div>
                 </div>
             </div>

@@ -2,7 +2,11 @@
 $c-white: #FFFFFF;
 $c-black: #000000;
 $c-red: #FF3365;
+$c-blue0: #011B2F;
+$c-blue1: #012741;
+$c-blue2: #005A8E;
 $c-lightGreen: #62D7C8;
+$c-green0: #509A9B;
 $c-green1: #459497;
 $c-green2: #2A8683;
 $c-lightOrange: #FCAB53;
@@ -12,6 +16,7 @@ $c-orange2: #B35C0E;
 //GRADIENTS
 $gradient-green: $c-green1 0%, $c-green2 100%;
 $gradient-orange: $c-orange1 0%, $c-orange2 100%;
+$gradient-blue: $c-blue1 0%, $c-blue2 100%;
 
 //FONT-SIZES
 $large: 7vw;

@@ -1,0 +1,20 @@
+/* ========================================================================
+  GRADIENTS
+  ======================================================================= */
+/* ========================================================================
+   ASPECT RATIO
+   ======================================================================== */
+/**
+ * from https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+ */
+.Wrapper {
+  color: white; }
+  .Wrapper span {
+    background: red;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    cursor: pointer; }
+
+.isChecked span {
+  background-color: blue !important; }

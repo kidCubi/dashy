@@ -1,0 +1,19 @@
+@import '../../sass/helpers/mixins';
+@import '../../sass/helpers/variables';
+
+.Wrapper {
+  color: white;
+  span {
+    background: red;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    cursor: pointer;
+  }
+}
+
+.isChecked {
+ span {
+   background-color: blue !important;
+ }
+}

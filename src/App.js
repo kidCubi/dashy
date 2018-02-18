@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import styles from './App.scss';
 
 import Packery from 'packery';
-import Draggabilly from 'draggabilly';
+// import Draggabilly from 'draggabilly';
 
 
 import Loading from './components/loading/Loading';
@@ -44,11 +44,15 @@ class App extends Component {
     }
 
     initDraggableGrid() {
-        const pckry = new Packery(this.refMainGrid, {
+        new Packery(this.refMainGrid, {
             gutter: 10,
             percentPosition: true,
             stagger: 30
         });
+        this.setState(state => ({
+            draggieLoaded: true,
+            hasLoaded: true
+        }));
         // pckry.element.childNodes.forEach((item, index) => {
         //     this.draggie = new Draggabilly(item, {
         //         containment: this.refMainGrid,
@@ -56,10 +60,6 @@ class App extends Component {
             // pckry.bindDraggabillyEvents(this.draggie);
             // this.draggie.disable();
             // if (( pckry.element.childNodes.length - 1) === index) {
-                this.setState(state => ({
-                    draggieLoaded: true,
-                    hasLoaded: true
-                }));
         //     }
         // });
     }

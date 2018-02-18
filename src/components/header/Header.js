@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+//TODO : résoudre bug sur draggie
+// import PropTypes from 'prop-types';
 import styles from './Header.module.scss';
 
 class Header extends Component {

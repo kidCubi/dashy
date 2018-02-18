@@ -1,0 +1,29 @@
+[
+  {
+    "hour": "8am",
+    "label": "daily",
+    "title": "Conference call",
+    "participants": [
+      "https://s3.amazonaws.com/uifaces/faces/twitter/nckjrvs/128.jpg",
+      "https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
+    ]
+  },
+  {
+    "hour": "10:30am",
+    "label": "urgent",
+    "title": "Build a transportation machine",
+    "participants": [
+      "https://s3.amazonaws.com/uifaces/faces/twitter/kerem/128.jpg"
+    ]
+  },
+  {
+    "hour": "3pm",
+    "label": "normal",
+    "title": "Make cookies",
+    "participants": [
+      "https://s3.amazonaws.com/uifaces/faces/twitter/jgoillot/128.jpg",
+      "https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg",
+      "https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
+    ]
+  }
+]

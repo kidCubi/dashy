@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="27px" viewBox="0 0 26 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 6</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-6" transform="translate(1.000000, 0.000000)">
+            <circle id="Oval-3" fill="#FFFFFF" cx="6.5" cy="17.5" r="1.5"></circle>
+            <circle id="Oval-3" fill="#FFFFFF" cx="17.5" cy="17.5" r="1.5"></circle>
+            <polygon id="Path-6" stroke="#FFFFFF" points="2.54422136 0.886531298 21.9669447 0.886531298 21.9669447 22.4368518 2.59892004 22.4368518"></polygon>
+            <path d="M2.53153043,4.60478744 L21.8977044,4.60478744" id="Path-7" stroke="#FFFFFF"></path>
+            <path d="M21.9815019,13.9999956 L2.8249287,13.9999956" id="Path-8" stroke="#FFFFFF"></path>
+            <polygon id="Path-9" stroke="#FFFFFF" points="5 23 5 25.6826062 8.61752993 25.6826062 8.61752993 23.0587941"></polygon>
+            <polygon id="Path-9" stroke="#FFFFFF" points="16 23 16 25.6826062 19.6175299 25.6826062 19.6175299 23.0587941"></polygon>
+            <path d="M21.8666866,7 C23.20002,6.99727675 23.8666866,7.79382751 23.8666866,9.38965229 C23.8666866,10.9854771 23.20002,11.709981 21.8666866,11.5631642" id="Path-10" stroke="#FFFFFF"></path>
+            <path d="M0,7 C2,6.99727675 3,7.79382751 3,9.38965229 C3,10.9854771 2,11.709981 0,11.5631642" id="Path-10" stroke="#FFFFFF" transform="translate(1.500000, 9.290859) scale(-1, 1) translate(-1.500000, -9.290859) "></path>
+        </g>
+    </g>
+</svg>

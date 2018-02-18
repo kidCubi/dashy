@@ -20,7 +20,7 @@ class Transports extends Component {
     }
 
     componentDidMount() {
-        fetch("http://transport.opendata.ch/v1/stationboard?station=Erlenbach&limit=4")
+        fetch("https://transport.opendata.ch/v1/stationboard?station=Erlenbach&limit=4")
             .then((response) => {
                 return response.json()
             })

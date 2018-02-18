@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './TodoList.module.scss';
 
@@ -25,5 +26,11 @@ class TodoListItem extends Component {
         );
     }
 }
+
+TodoListItem.propTypes = {
+    checkItem: PropTypes.func,
+    index: PropTypes.number,
+    item: PropTypes.object
+};
 
 export default TodoListItem;

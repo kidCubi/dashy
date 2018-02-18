@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './Agenda.module.scss';
 
@@ -58,6 +59,13 @@ const AgendaEntry = (props) => {
             <span className={styles.EventName}>{props.eventName}</span>
         </div>
     );
+};
+
+AgendaEntry.propTypes = {
+    eventName: PropTypes.string,
+    hour: PropTypes.string,
+    label: PropTypes.string,
+    participants: PropTypes.array,
 };
 
 export default AgendaEntry;

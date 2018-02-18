@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import styles from './Transports.module.scss';
 
 const TransportsEntry = (props) => {
@@ -24,6 +26,13 @@ const TransportsEntry = (props) => {
             </div>
         );
     }
+};
+
+TransportsEntry.propTypes = {
+    departure: PropTypes.number,
+    destination: PropTypes.string,
+    index: PropTypes.number,
+    number: PropTypes.string
 };
 
 export default TransportsEntry;

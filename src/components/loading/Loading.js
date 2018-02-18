@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './Loading.module.scss';
 
@@ -32,5 +33,9 @@ class Loading extends Component {
         );
     }
 }
+
+Loading.propTypes = {
+    hasLoaded: PropTypes.bool
+};
 
 export default Loading;

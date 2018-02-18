@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styles from './Header.module.scss';
 
 class Header extends Component {
@@ -25,5 +26,11 @@ class Header extends Component {
         );
     }
 }
+
+Header.propTypes = {
+    //TODO : résoudre bug sur draggie
+   // draggieInst:
+};
+
 
 export default Header;

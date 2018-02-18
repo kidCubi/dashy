@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import * as d3 from 'd3';
 
 import styles from '../Money.module.scss';
@@ -6,7 +7,6 @@ import styles from '../Money.module.scss';
 import Axis from './Axis';
 
 const LineChart = (props) => {
-
     const margin = { top: 5, right: 20, bottom: 20, left: 20 };
     const w = props.width - (margin.left + margin.right);
     const h = props.height - (margin.top + margin.bottom);
@@ -70,5 +70,10 @@ const LineChart = (props) => {
     );
 };
 
+LineChart.propTypes = {
+    data: PropTypes.array,
+    height: PropTypes.number,
+    id: PropTypes.string
+};
 
 export default LineChart;

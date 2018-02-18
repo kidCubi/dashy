@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './Meteo.module.scss';
 import { kelvinToCelcius, getWeekDay } from "../../helpers";
@@ -52,6 +53,13 @@ const Day = (props) => {
             </div>
         )
     }
+};
+
+Day.propTypes = {
+    city: PropTypes.string,
+    index: PropTypes.number,
+    temp: PropTypes.number,
+    weather: PropTypes.string
 };
 
 export default Day;

@@ -1,13 +1,37 @@
+//COLORS
 $c-white: #FFFFFF;
 $c-black: #000000;
-$c-red: #E6213C;
+$c-red: #FF3365;
+$c-lightGreen: #62D7C8;
+$c-green1: #459497;
+$c-green2: #2A8683;
+$c-lightOrange: #FCAB53;
+$c-orange1: #B38A0D;
+$c-orange2: #B35C0E;
+
+//GRADIENTS
+$gradient-green: $c-green1 0%, $c-green2 100%;
+$gradient-orange: $c-orange1 0%, $c-orange2 100%;
+
+//FONT-SIZES
+$large: 7vw;
+$medium: 2vw;
+$small: 3vw;
 
 //FONTS HERE
+$f-robotoRegularSmall: normal 300 $small 'Roboto', sans-serif;
+$f-robotoRegularMedium: normal 300 $medium 'Roboto', sans-serif;
+$f-robotoRegularLarge: normal 300 $large 'Roboto', sans-serif;
+$f-robotoThinSmall: normal 100 $small 'Roboto', sans-serif;
+$f-robotoThinMedium: normal 100 $medium 'Roboto', sans-serif;
+$f-robotoThinLarge: normal 100 $large 'Roboto', sans-serif;
 
+//BREAKPOINTS
 $mq_tablet: 40.0625em;
 $mq_desktop: 64.0625em;
 $mq_desktop-large: 90em;
 
+//Easings
 $snap: cubic-bezier(0, 1, .5, 1);
 $easeOutCubic: cubic-bezier(.215, .61, .355, 1);
 $easeInOutCubic: cubic-bezier(.645, .045, .355, 1);

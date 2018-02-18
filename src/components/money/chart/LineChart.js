@@ -7,7 +7,7 @@ import Axis from './Axis';
 
 const LineChart = (props) => {
 
-    const margin = { top: 5, right: 50, bottom: 20, left: 50 };
+    const margin = { top: 5, right: 20, bottom: 20, left: 20 };
     const w = props.width - (margin.left + margin.right);
     const h = props.height - (margin.top + margin.bottom);
     const parseDate = d3.timeParse("%e-%b-%y");
@@ -55,12 +55,10 @@ const LineChart = (props) => {
                 {
                     filteredData.map((d, i) => {
                         return (
-                            <circle className="dot"
-                                    r="7"
+                            <circle className={styles.Dot}
+                                    r="3"
                                     cx={x(d.date)}
                                     cy={y(d.amount)}
-                                    fill="#7dc7f4"
-                                    stroke="#3f5175" strokeWidth="5px"
                                     key={i}
                                     data-key={d3.timeFormat("%b %e")(d.date)}
                                     data-value={d.amount}/>
@@ -71,5 +69,6 @@ const LineChart = (props) => {
         </svg>
     );
 };
+
 
 export default LineChart;

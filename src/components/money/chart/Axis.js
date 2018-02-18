@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import * as d3 from 'd3';
-
 import ReactDOM from 'react-dom';
+
+import styles from './../Money.module.scss';
 
 class Axis extends Component {
     constructor(props) {
@@ -16,12 +17,18 @@ class Axis extends Component {
     renderAxis() {
         this.node = ReactDOM.findDOMNode(this);
         d3.select(this.node).call(this.props.axis);
+        d3.selectAll(".tick line")
+            .attr("stroke", "#FFFFFF")
+            .attr("y2", 30)
+            .attr("x1", 35)
+            .attr("x2", 35)
     }
+
 
     render() {
         const translate = `translate(0,${this.props.h})`;
         return (
-            <g className="axis" transform={this.props.axisType === "x" ? translate: ""} >
+            <g className={styles.Axis} transform={this.props.axisType === "x" ? translate: ""} >
             </g>
         );
     }

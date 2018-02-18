@@ -35,14 +35,18 @@ class Money extends Component {
 
     render() {
         return (
-            <div className={styles.Wrapper}>
-                <p> Money </p>
-                <span>{this.totalBalance} CHF</span>
+            <div className={styles.Wrapper} ref={(node) => {
+                this.refMoneyWrapper = node
+            }}>
+                <div className={styles.Heading}>
+                    <span className={styles.HeadingIcon}></span>
+                    <span>{this.totalBalance} CHF</span>
+                </div>
                 {this.props.app.moneyLoaded &&
                 <LineChart
                     data={this.data}
-                    width={600}
-                    height={300}
+                    width={this.refMoneyWrapper.getBoundingClientRect().width}
+                    height={this.refMoneyWrapper.getBoundingClientRect().height / 2}
                     id="chart_v1"
                 />
                 }

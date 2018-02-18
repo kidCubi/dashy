@@ -2,13 +2,54 @@
 @import '../../sass/helpers/variables';
 
 .Wrapper {
-  color: black;
+  color: $c-white;
+  margin: 0 8px;
+  padding-bottom: 30px;
+  height: 250px;
 }
 
 .Line {
   fill: none;
-  stroke: #7dc7f4;
-  stroke-width: 5px;
-  filter: drop-shadow( 0px 2px 2px rgba(0,0,0,.3) );
+  stroke: $c-lightOrange;
+  stroke-width: 1px;
 }
 
+.Dot {
+  fill: $c-lightOrange;
+}
+
+.Axis {
+  path{
+    display: none;
+  }
+  text {
+    fill: white;
+  }
+}
+
+.Axis:first-of-type {
+  line {
+    display: none;
+  }
+}
+
+
+.Heading {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  span {
+    display: inline-block;
+    font-size: 5.5vw;
+  }
+}
+
+.HeadingIcon {
+  height: 26px;
+  width: 26px;
+  background: url('../../assets/svg/moneyIcon.svg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  top: 5px;
+  left: 2px;
+  margin-right: 8px;
+}

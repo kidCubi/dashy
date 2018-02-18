@@ -1,0 +1,19 @@
+/* ========================================================================
+  GRADIENTS
+  ======================================================================= */
+/* ========================================================================
+   ASPECT RATIO
+   ======================================================================== */
+/**
+ * from https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+ */
+.Wrapper {
+  height: 80px;
+  width: 100%;
+  background: red; }
+
+.DragTrigger {
+  height: 50px;
+  width: 50px;
+  background: blue;
+  display: block; }

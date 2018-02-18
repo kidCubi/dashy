@@ -1,0 +1,15 @@
+@import '../../sass/helpers/mixins';
+@import '../../sass/helpers/variables';
+
+.Wrapper {
+  height: 80px;
+  width: 100%;
+  background: red;
+}
+
+.DragTrigger {
+  height: 50px;
+  width: 50px;
+  background: blue;
+  display: block;
+}

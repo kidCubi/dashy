@@ -1,0 +1,100 @@
+/* ========================================================================
+  GRADIENTS
+  ======================================================================= */
+/* ========================================================================
+   ASPECT RATIO
+   ======================================================================== */
+/**
+ * from https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+ */
+.Wrapper {
+  color: white;
+  height: 100%;
+  padding-bottom: 25px; }
+
+.Heading {
+  margin: 10px;
+  display: flex;
+  align-items: center; }
+
+.IconToday {
+  height: 100%;
+  width: 28px;
+  font-size: 4vw;
+  position: relative;
+  text-align: center; }
+  .IconToday:before {
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: inherit;
+    top: -4px;
+    left: 1px;
+    background: url("../../assets/svg/calendar.svg") no-repeat left top;
+    background-size: cover; }
+
+.Title {
+  font: normal 300 7vw "Roboto", sans-serif;
+  display: inline-block;
+  margin-left: 10px; }
+
+.Entries {
+  margin: 0 8px; }
+
+.Entry {
+  background: rgba(255, 255, 255, 0.1);
+  max-height: 53px;
+  padding-left: 11px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  .Entry:first-of-type {
+    margin-bottom: 6px; }
+  .Entry:last-of-type {
+    margin-top: 6px; }
+
+.Hour {
+  display: inline-block;
+  margin-bottom: 11px;
+  padding-left: 20px;
+  position: relative; }
+  .Hour:before {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    left: 0;
+    background: url("../../assets/svg/clock.svg") no-repeat left top;
+    background-size: cover; }
+
+.Participants {
+  list-style: none;
+  display: flex;
+  float: right;
+  margin-right: 6px;
+  align-items: center; }
+
+.Participant {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  background-size: cover;
+  border-radius: 50%;
+  margin-left: 5px; }
+
+.LeftParticipants {
+  display: inline-block;
+  opacity: 0.5;
+  margin-right: 2px;
+  font-size: 2.2vw; }
+
+.EventName {
+  display: block; }
+
+.Daily {
+  border-left: 1px solid #62D7C8; }
+
+.Urgent {
+  border-left: 1px solid #FF3365; }
+
+.Normal {
+  border-left: 1px solid #FCAB53; }

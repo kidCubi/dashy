@@ -45,5 +45,41 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/* ========================================================================
+  GRADIENTS
+  ======================================================================= */
+/* ========================================================================
+   ASPECT RATIO
+   ======================================================================== */
+/**
+ * from https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+ */
 html, body {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  min-height: 100vh;
+  font: normal 100 3vw "Roboto", sans-serif; }
+
+.Grid {
+  border: 1px solid red;
+  min-height: 100vh; }
+
+.GridItem {
+  border-radius: 10px;
+  width: 48.79%; }
+
+.GridItemLarge {
+  border-radius: 10px;
+  width: 97.999%;
+  max-height: 202px; }
+
+.ItemGreen {
+  background: -webkit-linear-gradient(top, #459497 0%, #2A8683 100%);
+  background: -moz-linear-gradient(top, #459497 0%, #2A8683 100%);
+  background: -o-linear-gradient(top, #459497 0%, #2A8683 100%);
+  background: linear-gradient(top, #459497 0%, #2A8683 100%); }
+
+.ItemOrange {
+  background: -webkit-linear-gradient(top, #B38A0D 0%, #B35C0E 100%);
+  background: -moz-linear-gradient(top, #B38A0D 0%, #B35C0E 100%);
+  background: -o-linear-gradient(top, #B38A0D 0%, #B35C0E 100%);
+  background: linear-gradient(top, #B38A0D 0%, #B35C0E 100%); }

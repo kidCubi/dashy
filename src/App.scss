@@ -9,20 +9,24 @@ html, body {
 }
 
 .Grid {
-  border: 1px solid red;
+  @include gradient(top, $gradient-blue);
   min-height: 100vh;
+  //no padding: 0 20px - affects widget layout
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .GridItem {
   border-radius: 10px;
   width: 48.79%;
-  //min-height: 238px;
+  min-height: 280px;
 }
 
 .GridItemLarge {
   border-radius: 10px;
-  width: 97.999%;
-  max-height: 202px;
+  width: 99.79%;
+  max-height: 196px;
+  overflow: hidden;
 }
 
 .ItemGreen {

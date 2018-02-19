@@ -18,18 +18,18 @@
   align-items: center; }
 
 .IconToday {
-  height: 100%;
-  width: 31px;
+  height: 6vw;
+  width: 7vw;
   font-size: 4vw;
   position: relative;
   text-align: center; }
   .IconToday:before {
     content: '';
     position: absolute;
-    height: 27px;
+    height: inherit;
     width: inherit;
-    top: -5px;
-    left: 1px;
+    top: -0.9vw;
+    left: 0.3vw;
     background: url("../../assets/svg/calendar.svg") no-repeat left top;
     background-size: cover; }
 

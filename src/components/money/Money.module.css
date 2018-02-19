@@ -37,8 +37,8 @@
     font-size: 5.5vw; }
 
 .HeadingIcon {
-  height: 26px;
-  width: 26px;
+  height: 5vw;
+  width: 5vw;
   background: url("../../assets/svg/moneyIcon.svg") no-repeat center center;
   background-size: cover;
   position: relative;

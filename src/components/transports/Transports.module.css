@@ -20,8 +20,8 @@
     font-size: 6vw; }
 
 .HeadingIcon {
-  height: 26px;
-  width: 24px;
+  height: 5vw;
+  width: 5vw;
   background: url("../../assets/svg/busIcon.svg") no-repeat center center;
   background-size: cover;
   position: relative;

@@ -14,18 +14,18 @@
 }
 
 .IconToday {
-  height: 100%;
-  width: 31px;
+  height: 6vw;
+  width: 7vw;
   font-size: 4vw;
   position: relative;
   text-align: center;
   &:before {
     content: '';
     position: absolute;
-    height: 27px;
+    height: inherit;
     width: inherit;
-    top: -5px;
-    left: 1px;
+    top: -0.9vw;
+    left: 0.3vw;
     background: url('../../assets/svg/calendar.svg') no-repeat left top;
     background-size: cover;
   }
@@ -43,7 +43,6 @@
 
 .Entry {
   background: rgba($c-white, 0.1);
-  //max-height: 53px;
   padding-left: 11px;
   padding-top: 10px;
   padding-bottom: 10px;

@@ -4,7 +4,10 @@
 .Wrapper {
   color: $c-white;
   margin: 0 8px;
-  padding-bottom: 30px;
+  height: 253px;
+  @media screen and (max-width: 520px) {
+    height: 167px;
+  }
 }
 
 .Line {

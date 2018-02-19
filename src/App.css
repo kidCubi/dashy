@@ -70,12 +70,12 @@ html, body {
 
 .GridItem {
   border-radius: 10px;
-  width: 48.5vw;
+  width: 48.79vw;
   min-height: 280px; }
 
 .GridItemLarge {
   border-radius: 10px;
-  width: 100vw;
+  width: 99.79vw;
   overflow: hidden; }
 
 .ItemGreen {

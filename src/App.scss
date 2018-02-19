@@ -11,20 +11,20 @@ html, body {
 .Grid {
   @include gradient(top, $gradient-blue);
   min-height: 100vh;
-  //no padding: 0 20px - affects widget layout
+  //no padding: 0 20px - affects widget drag
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
 .GridItem {
   border-radius: 10px;
-  width: 48.5vw;
+  width: 48.79vw;
   min-height: 280px;
 }
 
 .GridItemLarge {
   border-radius: 10px;
-  width: 100vw;
+  width: 99.79vw;
   overflow: hidden;
 }
 

@@ -21,6 +21,9 @@ class Money extends Component {
     }
 
     componentDidMount() {
+        setTimeout(() => {
+            console.log(this.refMoneyWrapper.getBoundingClientRect().height)
+        },3000)
         fetch("./assets/json/money.json")
             .then((response) => {
                 return response.json()
@@ -46,7 +49,7 @@ class Money extends Component {
                 <LineChart
                     data={this.data}
                     width={this.refMoneyWrapper.getBoundingClientRect().width}
-                    height={this.refMoneyWrapper.getBoundingClientRect().height / 2}
+                    height={this.refMoneyWrapper.getBoundingClientRect().height / 1.35}
                     id="chart_v1"
                 />
                 }

@@ -70,13 +70,12 @@ html, body {
 
 .App__GridItem__2M6rF4 {
   border-radius: 10px;
-  width: 48.79%;
+  width: 48.5vw;
   min-height: 280px; }
 
 .App__GridItemLarge__2l3yIU {
   border-radius: 10px;
-  width: 99.79%;
-  max-height: 196px;
+  width: 100vw;
   overflow: hidden; }
 
 .App__ItemGreen__1PQp-1 {
@@ -125,11 +124,6 @@ html, body {
 .Loading-module__HasLoaded__1wKzHU {
   transform: scale(1.2);
   opacity: 0; }
-  @media screen and (min-width: 768px) {
-    .Loading-module__HasLoaded__1wKzHU {
-      display: flex !important;
-      opacity: 1 !important;
-      transform: scale(1) !important; } }
 /* ========================================================================
   GRADIENTS
   ======================================================================= */
@@ -265,7 +259,7 @@ html, body {
 .Meteo-module__Rain__rPUM__ {
   height: 70px;
   width: 70px;
-  background-image: url(/static/media/rain.f20e2948.png);
+  background-image: url(/static/media/rain.64abd1f5.png);
   background-position: left center;
   background-size: cover;
   animation: Meteo-module__playSnow__3RlbMQ 3s infinite steps(211); }
@@ -295,18 +289,18 @@ html, body {
   align-items: center; }
 
 .Agenda-module__IconToday__dWsfVK {
-  height: 100%;
-  width: 31px;
+  height: 6vw;
+  width: 7vw;
   font-size: 4vw;
   position: relative;
   text-align: center; }
   .Agenda-module__IconToday__dWsfVK:before {
     content: '';
     position: absolute;
-    height: 27px;
+    height: inherit;
     width: inherit;
-    top: -5px;
-    left: 1px;
+    top: -0.9vw;
+    left: 0.3vw;
     background: url(/static/media/calendar.2a427519.svg) no-repeat left top;
     background-size: cover; }
 
@@ -320,7 +314,6 @@ html, body {
 
 .Agenda-module__Entry__2aqSJt {
   background: rgba(255, 255, 255, 0.1);
-  max-height: 53px;
   padding-left: 11px;
   padding-top: 10px;
   padding-bottom: 10px; }
@@ -397,8 +390,8 @@ html, body {
     font-size: 6vw; }
 
 .Transports-module__HeadingIcon__WILzCp {
-  height: 26px;
-  width: 24px;
+  height: 5vw;
+  width: 5vw;
   background: url(/static/media/busIcon.af41a8ab.svg) no-repeat center center;
   background-size: cover;
   position: relative;
@@ -407,7 +400,6 @@ html, body {
 
 .Transports-module__Entry__2ItzAL {
   background: rgba(255, 255, 255, 0.1);
-  max-height: 53px;
   padding-left: 4px;
   padding-top: 7px;
   padding-bottom: 6px;
@@ -454,8 +446,8 @@ html, body {
     font-size: 7vw; }
 
 .TodoList-module__HeadingIcon__FoHyx3 {
-  height: 25px;
-  width: 25px;
+  height: 5vw;
+  width: 5vw;
   background: url(/static/media/checkIcon.f4f880fb.svg) no-repeat center center;
   background-size: cover;
   margin-right: 5px;
@@ -474,8 +466,8 @@ html, body {
     border: none; }
 
 .TodoList-module__CheckInput__2N5ttn {
-  width: 23px;
-  height: 23px;
+  width: 5vw;
+  height: 5vw;
   margin-right: 10px;
   border: 1px solid #FFFFFF;
   border-radius: 50%;
@@ -523,8 +515,7 @@ html, body {
 .Money-module__Wrapper__ZSM0S3 {
   color: #FFFFFF;
   margin: 0 8px;
-  padding-bottom: 30px;
-  height: 250px; }
+  padding-bottom: 30px; }
 
 .Money-module__Line__3oxLTY {
   fill: none;
@@ -551,8 +542,8 @@ html, body {
     font-size: 5.5vw; }
 
 .Money-module__HeadingIcon__1ZCirz {
-  height: 26px;
-  width: 26px;
+  height: 5vw;
+  width: 5vw;
   background: url(/static/media/moneyIcon.37e5619f.svg) no-repeat center center;
   background-size: cover;
   position: relative;
@@ -560,4 +551,4 @@ html, body {
   left: 2px;
   margin-right: 8px; }
 
-/*# sourceMappingURL=main.1718b009.css.map*/
+/*# sourceMappingURL=main.54884704.css.map*/

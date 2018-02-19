@@ -8,8 +8,8 @@ import Axis from './Axis';
 
 const LineChart = (props) => {
     const margin = { top: 5, right: 20, bottom: 20, left: 20 };
-    const w = props.width - (margin.left + margin.right);
-    const h = props.height - (margin.top + margin.bottom);
+    let w = props.width - (margin.left + margin.right);
+    let h = props.height - (margin.top + margin.bottom);
     const parseDate = d3.timeParse("%e-%b-%y");
 
     props.data.forEach(function (d) {
@@ -47,7 +47,7 @@ const LineChart = (props) => {
     });
 
     return (
-        <svg id={props.id} width={props.width} height={props.height}>
+        <svg id={props.id} width={props.width} height={props.height} ref={(node) => {this.refSvgChart = node}}>
             <g transform={transform}>
                 <Axis h={h} axis={yAxis} axisType="y"/>
                 <Axis h={h} axis={xAxis} axisType="x"/>

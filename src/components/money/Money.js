@@ -18,12 +18,11 @@ class Money extends Component {
         super();
         this.data = null;
         this.totalBalance = 0;
+        this.width = 0;
+        this.height = 0;
     }
 
     componentDidMount() {
-        setTimeout(() => {
-            console.log(this.refMoneyWrapper.getBoundingClientRect().height)
-        },3000)
         fetch("./assets/json/money.json")
             .then((response) => {
                 return response.json()

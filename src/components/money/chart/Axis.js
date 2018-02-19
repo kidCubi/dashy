@@ -25,7 +25,6 @@ class Axis extends Component {
             .attr("x2", 35)
     }
 
-
     render() {
         const translate = `translate(0,${this.props.h})`;
         return (

@@ -70,12 +70,12 @@ html, body {
 
 .App__GridItem__2M6rF4 {
   border-radius: 10px;
-  width: 48.5vw;
+  width: 48.79vw;
   min-height: 280px; }
 
 .App__GridItemLarge__2l3yIU {
   border-radius: 10px;
-  width: 100vw;
+  width: 99.79vw;
   overflow: hidden; }
 
 .App__ItemGreen__1PQp-1 {
@@ -216,8 +216,11 @@ html, body {
   align-items: center;
   justify-content: space-around;
   width: 80%;
-  height: 23px;
+  height: 4.67vw;
   margin: 2px auto; }
+  @media screen and (max-width: 520px) {
+    .Meteo-module__ForecastContainer__2wBcaZ {
+      height: 5.5vw; } }
 
 .Meteo-module__ForecastDay__34oPnl {
   text-transform: uppercase;
@@ -325,13 +328,13 @@ html, body {
 .Agenda-module__Hour__3Yp7Tn {
   display: inline-block;
   margin-bottom: 11px;
-  padding-left: 20px;
+  padding-left: 4vw;
   position: relative; }
   .Agenda-module__Hour__3Yp7Tn:before {
     content: '';
     position: absolute;
-    height: 15px;
-    width: 15px;
+    height: 3vw;
+    width: 3vw;
     left: 0;
     background: url(/static/media/clock.ac131b2a.svg) no-repeat left top;
     background-size: cover; }
@@ -345,8 +348,8 @@ html, body {
 
 .Agenda-module__Participant__23mC_9 {
   display: inline-block;
-  height: 15px;
-  width: 15px;
+  height: 3vw;
+  width: 3vw;
   background-size: cover;
   border-radius: 50%;
   margin-left: 5px; }
@@ -400,7 +403,7 @@ html, body {
 
 .Transports-module__Entry__2ItzAL {
   background: rgba(255, 255, 255, 0.1);
-  padding-left: 4px;
+  padding-left: 2vw;
   padding-top: 7px;
   padding-bottom: 6px;
   position: relative;
@@ -515,7 +518,10 @@ html, body {
 .Money-module__Wrapper__ZSM0S3 {
   color: #FFFFFF;
   margin: 0 8px;
-  padding-bottom: 30px; }
+  height: 253px; }
+  @media screen and (max-width: 520px) {
+    .Money-module__Wrapper__ZSM0S3 {
+      height: 167px; } }
 
 .Money-module__Line__3oxLTY {
   fill: none;
@@ -551,4 +557,4 @@ html, body {
   left: 2px;
   margin-right: 8px; }
 
-/*# sourceMappingURL=main.54884704.css.map*/
+/*# sourceMappingURL=main.04e536dd.css.map*/

@@ -55,7 +55,7 @@
   width: 80%;
   height: 4.67vw;
   margin: 2px auto;
-  @media screen and (max-width: 520px) {
+  @include bp(phone) {
     height: 5.5vw;
   }
 }

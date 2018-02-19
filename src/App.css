@@ -54,6 +54,9 @@ table {
 /**
  * from https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
  */
+/* ========================================================================
+   BREAKPOINTS
+   ======================================================================== */
 html, body {
   overflow-x: hidden;
   min-height: 100vh;

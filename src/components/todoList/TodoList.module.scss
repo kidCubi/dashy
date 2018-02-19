@@ -38,6 +38,9 @@
     padding-bottom: 0;
     border: none;
   }
+  @include bp(phone) {
+    padding: 3.6vw 0;
+  }
 }
 
 .CheckInput {

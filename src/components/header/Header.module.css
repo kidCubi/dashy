@@ -7,6 +7,9 @@
 /**
  * from https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
  */
+/* ========================================================================
+   BREAKPOINTS
+   ======================================================================== */
 .Wrapper {
   height: 80px;
   width: 100%;

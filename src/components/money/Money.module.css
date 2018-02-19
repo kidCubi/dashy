@@ -7,11 +7,14 @@
 /**
  * from https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
  */
+/* ========================================================================
+   BREAKPOINTS
+   ======================================================================== */
 .Wrapper {
   color: #FFFFFF;
   margin: 0 8px;
   height: 253px; }
-  @media screen and (max-width: 520px) {
+  @media (max-width: 520px) {
     .Wrapper {
       height: 167px; } }
 

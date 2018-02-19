@@ -7,6 +7,9 @@
 /**
  * from https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
  */
+/* ========================================================================
+   BREAKPOINTS
+   ======================================================================== */
 .Wrapper {
   color: #FFFFFF;
   padding-bottom: 30px; }
@@ -55,7 +58,7 @@
   width: 80%;
   height: 4.67vw;
   margin: 2px auto; }
-  @media screen and (max-width: 520px) {
+  @media (max-width: 520px) {
     .ForecastContainer {
       height: 5.5vw; } }
 

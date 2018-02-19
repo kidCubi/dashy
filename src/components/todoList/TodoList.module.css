@@ -7,6 +7,9 @@
 /**
  * from https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
  */
+/* ========================================================================
+   BREAKPOINTS
+   ======================================================================== */
 .Wrapper {
   color: white;
   margin: 0 8px;
@@ -38,6 +41,9 @@
   .TodoItem:last-of-type {
     padding-bottom: 0;
     border: none; }
+  @media (max-width: 520px) {
+    .TodoItem {
+      padding: 3.6vw 0; } }
 
 .CheckInput {
   width: 5vw;

@@ -34,3 +34,19 @@
     height: 100%;
   }
 }
+
+/* ========================================================================
+   BREAKPOINTS
+   ======================================================================== */
+
+@mixin bp($point) {
+  @if $point == mobile {
+    @media (max-width: 1600px) { @content; }
+  }
+  @else if $point == tablet {
+    @media (max-width: 1250px) { @content; }
+  }
+  @else if $point == phone {
+    @media (max-width: 520px)  { @content; }
+  }
+}

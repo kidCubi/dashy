@@ -5,7 +5,7 @@
   color: $c-white;
   margin: 0 8px;
   height: 253px;
-  @media screen and (max-width: 520px) {
+  @include bp(phone) {
     height: 167px;
   }
 }

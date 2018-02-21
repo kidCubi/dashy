@@ -3,6 +3,7 @@ export const SET_MONEY_LOADED = "SET_MONEY_LOADED";
 export const SET_AGENDA_LOADED = "SET_AGENDA_LOADED";
 export const SET_TRANSPORTS_LOADED = "SET_TRANSPORTS_LOADED";
 export const SET_TODO_LOADED = "SET_TODO_LOADED";
+export const SET_MENU_COORDINATES = "SET_MENU_COORDINATES";
 
 export function setMeteoLoaded(loaded) {
     return {
@@ -36,5 +37,13 @@ export function setTodoLoaded(loaded) {
     return {
         type: SET_TODO_LOADED,
         loaded
+    }
+}
+
+export function setMenuCoordinates(x, y) {
+    return {
+        type: SET_MENU_COORDINATES,
+        x: x,
+        y: y
     }
 }

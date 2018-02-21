@@ -44,7 +44,7 @@ class Money extends Component {
                     <span className={styles.HeadingIcon}></span>
                     <span>{this.totalBalance} CHF</span>
                 </div>
-                {this.props.app.moneyLoaded &&
+                {this.props.app.modulesLoaded.moneyLoaded &&
                 <LineChart
                     data={this.data}
                     width={this.refMoneyWrapper.getBoundingClientRect().width}

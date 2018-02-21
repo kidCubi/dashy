@@ -43,7 +43,7 @@ class Transports extends Component {
         //Note : disons que dans le backend, l'utilisateur aura sélectionné 4 stations favorites
         return (
             <div className={styles.Wrapper}>
-                {this.props.app.transportsLoaded &&
+                {this.props.app.modulesLoaded.transportsLoaded &&
                 <div>
                     {this.indents}
                 </div>

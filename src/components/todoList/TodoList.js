@@ -54,7 +54,7 @@ class TodoList extends Component {
                     <span className={styles.HeadingIcon}></span>
                     <span>{this.state.count} left</span>
                 </div>
-                {this.props.app.todoLoaded &&
+                {this.props.app.modulesLoaded.todoLoaded &&
                 <ul> {items} </ul>
                 }
                 {this.props.children}

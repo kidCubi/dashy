@@ -48,7 +48,7 @@ class Meteo extends Component {
     render() {
         return (
             <div className={styles.Wrapper}>
-                {this.props.app.meteoLoaded &&
+                {this.props.app.modulesLoaded.meteoLoaded &&
                     <div>{this.indents}</div>
                 }
                 {this.props.children}

@@ -7,6 +7,7 @@ import Packery from 'packery';
 
 
 import Loading from './components/loading/Loading';
+import Menu from './components/menu/Menu';
 import Header from './components/header/Header';
 import Meteo from './components/meteo/Meteo';
 import Agenda from './components/agenda/Agenda';
@@ -32,8 +33,8 @@ class App extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        const allTrue = Object.keys(nextProps.app).every(function (k) {
-            return nextProps.app[k] === true;
+        const allTrue = Object.keys(nextProps.app.modulesLoaded).every(function (k) {
+            return nextProps.app.modulesLoaded[k] === true;
         });
         if (allTrue) {
             //TODO : find workaround for setTimeout
@@ -44,8 +45,9 @@ class App extends Component {
     }
 
     initDraggableGrid() {
+        console.log('init grid')
         new Packery(this.refMainGrid, {
-            gutter: 10,
+            gutter: 8,
             percentPosition: true,
             stagger: 30
         });
@@ -57,9 +59,9 @@ class App extends Component {
         //     this.draggie = new Draggabilly(item, {
         //         containment: this.refMainGrid,
         //     });
-            // pckry.bindDraggabillyEvents(this.draggie);
-            // this.draggie.disable();
-            // if (( pckry.element.childNodes.length - 1) === index) {
+        // pckry.bindDraggabillyEvents(this.draggie);
+        // this.draggie.disable();
+        // if (( pckry.element.childNodes.length - 1) === index) {
         //     }
         // });
     }
@@ -82,6 +84,7 @@ class App extends Component {
         );
         return (
             <div>
+                <Menu/>
                 <Loading
                     hasLoaded={this.state.hasLoaded}
                 />

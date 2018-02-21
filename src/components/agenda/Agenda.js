@@ -47,7 +47,7 @@ class Agenda extends Component {
                     <span className={styles.IconToday}>{this.today}</span>
                     <span className={styles.Title}>Today</span>
                 </div>
-                {this.props.app.agendaLoaded &&
+                {this.props.app.modulesLoaded.agendaLoaded &&
                 <div className={styles.Entries}>
                     {this.indents}
                 </div>

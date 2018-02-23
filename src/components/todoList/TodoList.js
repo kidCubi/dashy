@@ -16,11 +16,12 @@ const mapActions = dispatch => ({
 class TodoList extends Component {
     constructor() {
         super();
+        //Data could have been in a JSON file
         this.todoItems = [
-            { value: "do stuff", complete: false },
-            { value: "do stuff", complete: false },
-            { value: "do stuff", complete: false },
-            { value: "do stuff", complete: false },
+            { value: "Write components", complete: false },
+            { value: "Do some SCSS", complete: false },
+            { value: "Debug the app", complete: false },
+            { value: "Push to prod ! :)", complete: false },
         ];
         this.state = {
             count: this.todoItems.filter(s => {
@@ -51,13 +52,11 @@ class TodoList extends Component {
         return (
             <div className={styles.Wrapper}>
                 <div className={styles.Heading}>
-                    <span className={styles.HeadingIcon}></span>
+                    <span className={styles.HeadingIcon}/>
                     <span>{this.state.count} left</span>
                 </div>
-                {this.props.app.modulesLoaded.todoLoaded &&
-                <ul> {items} </ul>
-                }
                 {this.props.children}
+                {this.props.app.modulesLoaded.todoLoaded && <ul> {items} </ul>}
             </div>
         );
     }

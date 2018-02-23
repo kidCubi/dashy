@@ -19,8 +19,8 @@ class TodoListItem extends Component {
             { [styles.isChecked]: this.props.item.complete },
         );
         return (
-            <li className={classes}>
-                <span className={styles.CheckInput} aria-hidden="true" onClick={this.checkTask}></span>
+            <li className={classes} onClick={this.checkTask}>
+                <span className={styles.CheckInput} aria-hidden="true"/>
                 <span className={styles.TodoTask}>  {this.props.item.value}</span>
             </li>
         );

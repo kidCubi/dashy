@@ -73,8 +73,7 @@ html, body {
 
 .App__GridItem__2M6rF4 {
   border-radius: 10px;
-  width: 48.79vw;
-  min-height: 280px; }
+  width: 48.91vw; }
 
 .App__GridItemLarge__2l3yIU {
   border-radius: 10px;
@@ -92,6 +91,24 @@ html, body {
   background: -moz-linear-gradient(top, #B38A0D 0%, #B35C0E 100%);
   background: -o-linear-gradient(top, #B38A0D 0%, #B35C0E 100%);
   background: linear-gradient(top, #B38A0D 0%, #B35C0E 100%); }
+
+.App__DisableWidgetManagement__lTGK5j {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background: #FF3365;
+  font-size: 4vw;
+  color: #FFFFFF;
+  height: 10vw;
+  z-index: 98;
+  transition: transform 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(150%); }
+
+.App__DisableWidgetManagementActive__2nGbQ0 {
+  transform: translateY(0%); }
 /* ========================================================================
   GRADIENTS
   ======================================================================= */
@@ -117,7 +134,8 @@ html, body {
   display: flex;
   transform: scale(1);
   opacity: 1;
-  transition: all 0.9s cubic-bezier(0.215, 0.61, 0.355, 1); }
+  transition: all 0.9s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-delay: 0.3s; }
 
 .Loading-module__Logo__1tEdGo {
   height: 55px;
@@ -130,6 +148,97 @@ html, body {
 .Loading-module__HasLoaded__1wKzHU {
   transform: scale(1.2);
   opacity: 0; }
+/* ========================================================================
+  GRADIENTS
+  ======================================================================= */
+/* ========================================================================
+   ASPECT RATIO
+   ======================================================================== */
+/**
+ * from https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+ */
+/* ========================================================================
+   BREAKPOINTS
+   ======================================================================== */
+.Menu-module__Wrapper__KMTvgO {
+  height: 100%;
+  width: 100vw;
+  top: 0;
+  position: fixed;
+  z-index: 99;
+  display: none; }
+
+.Menu-module__Circle__1RXjoo {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  fill: #011B2F; }
+
+.Menu-module__IsVisible__3hF8ug {
+  display: block; }
+
+.Menu-module__Container__2OJ_EO {
+  display: flex;
+  position: relative;
+  width: 100%;
+  color: #FFFFFF;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+
+.Menu-module__CloseBtn__2sQk-T {
+  position: absolute;
+  display: block;
+  z-index: 100;
+  color: #FFFFFF;
+  right: 10vw;
+  top: 10vw;
+  height: 5vw; }
+
+.Menu-module__MenuBtn__2Lnndv {
+  background: #B35C0E;
+  padding: 2vw 4vw;
+  margin: 3vw 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transform: translateY(25%);
+  opacity: 0; }
+
+.Menu-module__ContainerIsVisible__VbVV7s span, .Menu-module__ContainerIsVisible__VbVV7s ul {
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-delay: 1.5s;
+  opacity: 1;
+  transform: translateY(0%); }
+
+.Menu-module__MenuTitle__3aZXjt {
+  position: relative;
+  margin: 4vw 0 3vw 0;
+  transform: translateY(25%);
+  opacity: 0; }
+  .Menu-module__MenuTitle__3aZXjt:before {
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-color: #FFFFFF;
+    position: absolute;
+    bottom: 0; }
+
+.Menu-module__MenuOption__3ziEnm {
+  transform: translateY(25%);
+  opacity: 0; }
+  .Menu-module__MenuOption__3ziEnm li {
+    list-style: none;
+    background: #005A8E;
+    padding: 2vw 4vw;
+    margin: 3vw 0;
+    border-radius: 5px;
+    cursor: pointer; }
+
+.Menu-module__IsClosing__2J4jfw {
+  opacity: 0;
+  transform: translateY(20%);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1); }
 /* ========================================================================
   GRADIENTS
   ======================================================================= */
@@ -197,7 +306,7 @@ html, body {
   position: relative; }
   .Meteo-module__Heading__2cvPMb:after {
     content: '';
-    position: absolute;
+    position: relative;
     width: 40%;
     height: 1px;
     background: #509A9B;
@@ -545,7 +654,7 @@ html, body {
 .Money-module__Wrapper__ZSM0S3 {
   color: #FFFFFF;
   margin: 0 8px;
-  height: 253px; }
+  height: 483px; }
   @media (max-width: 520px) {
     .Money-module__Wrapper__ZSM0S3 {
       height: 167px; } }
@@ -584,4 +693,4 @@ html, body {
   left: 2px;
   margin-right: 8px; }
 
-/*# sourceMappingURL=main.cce8b4f0.css.map*/
+/*# sourceMappingURL=main.2130370a.css.map*/

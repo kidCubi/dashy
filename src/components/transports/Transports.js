@@ -40,7 +40,6 @@ class Transports extends Component {
     }
 
     render() {
-        //Note : disons que dans le backend, l'utilisateur aura sélectionné 4 stations favorites
         return (
             <div className={styles.Wrapper}>
                 {this.props.app.modulesLoaded.transportsLoaded &&

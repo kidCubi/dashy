@@ -13,7 +13,7 @@ const TransportsEntry = (props) => {
        return (
            //NICE TO HAVE : Ajouter géoloc
            <div className={styles.Heading}>
-               <span className={styles.HeadingIcon}></span>
+               <span className={styles.HeadingIcon}/>
                <span className={styles.HeadingTime}>~{result}min</span>
            </div>
        )

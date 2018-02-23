@@ -39,7 +39,7 @@ const Day = (props) => {
     if (props.index === 0) {
         return (
             <div className={styles.Heading}>
-                <span className={classesHeadingIcon}></span>
+                <span className={classesHeadingIcon}/>
                 <span className={styles.HeadingTemp}>{temp}°</span>
                 <span className={styles.HeadingCity}>{props.city}</span>
             </div>
@@ -48,7 +48,7 @@ const Day = (props) => {
         return (
             <div className={styles.ForecastContainer}>
                 <span className={styles.ForecastDay}>{day}</span>
-                <span className={classIconWeather}></span>
+                <span className={classIconWeather}/>
                 <span  className={styles.ForecastTemp}>{temp}°</span>
             </div>
         )

@@ -10,3 +10,82 @@
 /* ========================================================================
    BREAKPOINTS
    ======================================================================== */
+.Wrapper {
+  height: 100%;
+  width: 100vw;
+  top: 0;
+  position: fixed;
+  z-index: 99;
+  display: none; }
+
+.Circle {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  fill: #011B2F; }
+
+.IsVisible {
+  display: block; }
+
+.Container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  color: #FFFFFF;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+
+.CloseBtn {
+  position: absolute;
+  display: block;
+  z-index: 100;
+  color: #FFFFFF;
+  right: 10vw;
+  top: 10vw;
+  height: 5vw; }
+
+.MenuBtn {
+  background: #B35C0E;
+  padding: 2vw 4vw;
+  margin: 3vw 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transform: translateY(25%);
+  opacity: 0; }
+
+.ContainerIsVisible span, .ContainerIsVisible ul {
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-delay: 1.5s;
+  opacity: 1;
+  transform: translateY(0%); }
+
+.MenuTitle {
+  position: relative;
+  margin: 4vw 0 3vw 0;
+  transform: translateY(25%);
+  opacity: 0; }
+  .MenuTitle:before {
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-color: #FFFFFF;
+    position: absolute;
+    bottom: 0; }
+
+.MenuOption {
+  transform: translateY(25%);
+  opacity: 0; }
+  .MenuOption li {
+    list-style: none;
+    background: #005A8E;
+    padding: 2vw 4vw;
+    margin: 3vw 0;
+    border-radius: 5px;
+    cursor: pointer; }
+
+.IsClosing {
+  opacity: 0;
+  transform: translateY(20%);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1); }

@@ -73,8 +73,7 @@ html, body {
 
 .GridItem {
   border-radius: 10px;
-  width: 48.91vw;
-  min-height: 280px; }
+  width: 48.91vw; }
 
 .GridItemLarge {
   border-radius: 10px;
@@ -92,3 +91,21 @@ html, body {
   background: -moz-linear-gradient(top, #B38A0D 0%, #B35C0E 100%);
   background: -o-linear-gradient(top, #B38A0D 0%, #B35C0E 100%);
   background: linear-gradient(top, #B38A0D 0%, #B35C0E 100%); }
+
+.DisableWidgetManagement {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background: #FF3365;
+  font-size: 4vw;
+  color: #FFFFFF;
+  height: 10vw;
+  z-index: 98;
+  transition: transform 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(150%); }
+
+.DisableWidgetManagementActive {
+  transform: translateY(0%); }

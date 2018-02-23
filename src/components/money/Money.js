@@ -18,8 +18,11 @@ class Money extends Component {
         super();
         this.data = null;
         this.totalBalance = 0;
-        this.width = 0;
-        this.height = 0;
+        this.state = {
+            width: 0,
+            height: 0
+        };
+        this.raf = this.raf.bind(this);
     }
 
     componentDidMount() {
@@ -32,7 +35,26 @@ class Money extends Component {
                 const amount = this.data[this.data.length - 1].amount;
                 this.totalBalance = (amount > 0) ? `+${amount}` : `-${amount}`;
                 this.props.setMoneyLoaded(true);
-            })
+            });
+        this.setState(state => ({
+            width: this.refMoneyWrapper.getBoundingClientRect().width,
+            height: this.refMoneyWrapper.getBoundingClientRect().height
+        }));
+        this.raf();
+        window.addEventListener('resize', () => {
+            this.isResizing = true;
+        });
+    }
+
+    raf() {
+        requestAnimationFrame(this.raf);
+        if (this.isResizing) {
+            this.setState(state => ({
+                width: this.refMoneyWrapper.getBoundingClientRect().width,
+                height: this.refMoneyWrapper.getBoundingClientRect().height
+            }));
+            this.isResizing = false;
+        }
     }
 
     render() {
@@ -41,18 +63,18 @@ class Money extends Component {
                 this.refMoneyWrapper = node
             }}>
                 <div className={styles.Heading}>
-                    <span className={styles.HeadingIcon}></span>
+                    <span className={styles.HeadingIcon}/>
                     <span>{this.totalBalance} CHF</span>
                 </div>
+                {this.props.children}
                 {this.props.app.modulesLoaded.moneyLoaded &&
                 <LineChart
                     data={this.data}
-                    width={this.refMoneyWrapper.getBoundingClientRect().width}
-                    height={this.refMoneyWrapper.getBoundingClientRect().height / 1.35}
-                    id="chart_v1"
+                    width={this.state.width}
+                    height={this.state.height / 1.35}
+                    id="money_chart"
                 />
                 }
-                {this.props.children}
             </div>
         );
     }

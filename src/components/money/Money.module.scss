@@ -4,7 +4,7 @@
 .Wrapper {
   color: $c-white;
   margin: 0 8px;
-  height: 253px;
+  height: 483px;
   @include bp(phone) {
     height: 167px;
   }
@@ -34,7 +34,6 @@
     display: none;
   }
 }
-
 
 .Heading {
   margin-top: 10px;

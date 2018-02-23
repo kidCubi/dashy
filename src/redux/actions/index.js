@@ -3,7 +3,9 @@ export const SET_MONEY_LOADED = "SET_MONEY_LOADED";
 export const SET_AGENDA_LOADED = "SET_AGENDA_LOADED";
 export const SET_TRANSPORTS_LOADED = "SET_TRANSPORTS_LOADED";
 export const SET_TODO_LOADED = "SET_TODO_LOADED";
-export const SET_MENU_COORDINATES = "SET_MENU_COORDINATES";
+export const SET_MENU_OVERLAY_COORDINATES = "SET_MENU_OVERLAY_COORDINATES";
+export const SET_MENU_OPENCLOSE = "SET_MENU_OPENCLOSE";
+export const SET_DRAGGABLE_WIDGETS = "SET_DRAGGABLE_WIDGETS";
 
 export function setMeteoLoaded(loaded) {
     return {
@@ -40,10 +42,23 @@ export function setTodoLoaded(loaded) {
     }
 }
 
-export function setMenuCoordinates(x, y) {
+export function setMenuOverlayCoordinates(x, y) {
     return {
-        type: SET_MENU_COORDINATES,
-        x: x,
-        y: y
+        type: SET_MENU_OVERLAY_COORDINATES,
+        x, y
+    }
+}
+
+export function setMenuOpenClose(opened) {
+    return {
+        type: SET_MENU_OPENCLOSE,
+        opened
+    }
+}
+
+export function setDraggableWidgets(draggable) {
+    return {
+        type: SET_DRAGGABLE_WIDGETS,
+        draggable
     }
 }

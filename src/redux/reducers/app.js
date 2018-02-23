@@ -4,7 +4,9 @@ import {
     SET_AGENDA_LOADED,
     SET_TRANSPORTS_LOADED,
     SET_TODO_LOADED,
-    SET_MENU_COORDINATES
+    SET_MENU_OVERLAY_COORDINATES,
+    SET_MENU_OPENCLOSE,
+    SET_DRAGGABLE_WIDGETS
 } from '../actions/index';
 
 const initialState = {
@@ -15,8 +17,16 @@ const initialState = {
         transportsLoaded: false,
         todoLoaded: false,
     },
-    x: 0,
-    y: 0
+    widgets: {
+        draggable: false
+    },
+    menu: {
+        overlay: {
+            x: 0,
+            y: 0
+        },
+        isOpen: false
+    }
 };
 
 export default function (state = { ...initialState }, action) {
@@ -66,11 +76,34 @@ export default function (state = { ...initialState }, action) {
                 }
             }
         }
-        case SET_MENU_COORDINATES: {
+        case SET_MENU_OVERLAY_COORDINATES: {
             return {
                 ...state,
-                x: action.x,
-                y: action.y
+                menu: {
+                    ...state.menu,
+                    overlay: {
+                        ...state.menu.overlay,
+                        x: action.x,
+                        y: action.y
+                    }
+                }
+            }
+        }
+        case SET_MENU_OPENCLOSE: {
+            return {
+                ...state,
+                menu: {
+                    ...state.menu,
+                    isOpen: action.opened
+                }
+            }
+        }
+        case SET_DRAGGABLE_WIDGETS: {
+            return {
+                ...state,
+                widgets: {
+                    draggable: action.draggable
+                }
             }
         }
         default:

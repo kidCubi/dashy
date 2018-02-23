@@ -25,6 +25,7 @@
     "d3": "^4.13.0",
     "dotenv": "4.0.0",
     "draggabilly": "^2.1.1",
+    "es6-tween": "^5.1.0",
     "eslint": "4.10.0",
     "eslint-config-react-app": "^2.0.1",
     "eslint-loader": "1.9.0",

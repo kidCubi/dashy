@@ -23,12 +23,11 @@ class Loading extends Component {
     render() {
         const classes = classNames(
             styles.Wrapper,
-            { [styles.HasLoaded]: this.props.hasLoaded },
-            { [styles.LoadingDone]: this.props.loadingDone }
+            { [styles.HasLoaded]: this.props.hasLoaded }
         );
         return (
             <div className={classes} ref={(node) => {this.refLoading = node}} >
-                <span className={styles.Logo}></span>
+                <span className={styles.Logo}/>
             </div>
         );
     }

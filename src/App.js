@@ -3,8 +3,9 @@ import classNames from 'classnames';
 import styles from './App.scss';
 
 import Packery from 'packery';
-// import Draggabilly from 'draggabilly';
-
+//Import Draggability from https://draggabilly.desandro.com/ as a custom script
+//Including a PR not in the current release
+import Draggabilly from './vendors/Draggability';
 
 import Loading from './components/loading/Loading';
 import Menu from './components/menu/Menu';
@@ -17,36 +18,58 @@ import Money from './components/money/Money';
 
 import { connect } from 'react-redux';
 
+import { setDraggableWidgets } from './redux/actions/index'
+
 const mapState = state => ({
     app: state.app,
+});
+
+const mapActions = dispatch => ({
+    setDraggableWidgets: (draggable) => dispatch(setDraggableWidgets(draggable))
 });
 
 class App extends Component {
     constructor() {
         super();
-        this.initDraggableGrid = this.initDraggableGrid.bind(this);
-        this.draggie = null;
+        this.draggies = [];
         this.state = {
             draggieLoaded: false,
             hasLoaded: false
+        };
+        this.initDraggableGrid = this.initDraggableGrid.bind(this);
+        this.disableWidgetManagement = this.disableWidgetManagement.bind(this);
+        this.raf = this.raf.bind(this);
+    }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.app.widgets.draggable !== this.props.app.widgets.draggable) {
+            if (this.props.app.widgets.draggable) {
+                //Enable drag
+                this.pckry.element.childNodes.forEach((item, index) => {
+                    this.draggies.push(new Draggabilly(item, {
+                        containment: this.refMainGrid,
+                        columnWidth: 100
+                    }));
+                    this.draggies[index].enable();
+                    this.pckry.bindDraggabillyEvents(this.draggies[index]);
+                });
+            } else if (!this.props.app.widgets.draggable) {
+                //Disable drag
+                this.pckry.element.childNodes.forEach((item, index) => {
+                    this.draggies[index].disable();
+                    this.pckry.unbindDraggabillyEvents(this.draggies[index]);
+                });
+                this.draggies = [];
+            }
         }
     }
 
-    componentWillReceiveProps(nextProps) {
-        const allTrue = Object.keys(nextProps.app.modulesLoaded).every(function (k) {
-            return nextProps.app.modulesLoaded[k] === true;
-        });
-        if (allTrue) {
-            //TODO : find workaround for setTimeout
-            setTimeout(() => {
-                this.initDraggableGrid();
-            }, 500)
-        }
+    componentDidMount() {
+        this.raf();
     }
 
     initDraggableGrid() {
-        console.log('init grid')
-        new Packery(this.refMainGrid, {
+        this.pckry = new Packery(this.refMainGrid, {
             gutter: 8,
             percentPosition: true,
             stagger: 30
@@ -55,15 +78,21 @@ class App extends Component {
             draggieLoaded: true,
             hasLoaded: true
         }));
-        // pckry.element.childNodes.forEach((item, index) => {
-        //     this.draggie = new Draggabilly(item, {
-        //         containment: this.refMainGrid,
-        //     });
-        // pckry.bindDraggabillyEvents(this.draggie);
-        // this.draggie.disable();
-        // if (( pckry.element.childNodes.length - 1) === index) {
-        //     }
-        // });
+    }
+
+    disableWidgetManagement() {
+        this.props.setDraggableWidgets(false);
+    }
+
+    raf() {
+        const tick = requestAnimationFrame(this.raf);
+        const allTrue = Object.keys(this.props.app.modulesLoaded).every(k => {
+            return this.props.app.modulesLoaded[k] === true;
+        });
+        if (allTrue) {
+            this.initDraggableGrid();
+            window.cancelAnimationFrame(tick);
+        }
     }
 
     render() {
@@ -72,49 +101,43 @@ class App extends Component {
         );
         const smallOrange = classNames(
             styles.GridItem,
-            styles.ItemOrange,
+            styles.ItemOrange
         );
         const smallGreen = classNames(
             styles.GridItem,
-            styles.ItemGreen,
+            styles.ItemGreen
         );
         const largeGreen = classNames(
             styles.GridItemLarge,
-            styles.ItemGreen,
+            styles.ItemGreen
+        );
+        const disableWidgetManagement = classNames(
+            { [styles.DisableWidgetManagementActive]: this.props.app.widgets.draggable },
+            styles.DisableWidgetManagement
         );
         return (
             <div>
-                <Menu/>
-                <Loading
-                    hasLoaded={this.state.hasLoaded}
-                />
                 {this.state.draggieLoaded &&
-                <Header
-                    draggieInst={this.draggie}
-                />
+                <Header>
+                    <Menu/>
+                    <div className={disableWidgetManagement} onClick={this.disableWidgetManagement}>I'm done !</div>
+                </Header>
                 }
+
+                <Loading hasLoaded={this.state.hasLoaded}/>
+
                 <div className={classes} ref={(node) => {
                     this.refMainGrid = node
                 }}>
-                    <div className={smallGreen}>
-                        <Meteo/>
-                    </div>
-                    <div className={smallOrange}>
-                        <Agenda/>
-                    </div>
-                    <div className={largeGreen}>
-                        <Money/>
-                    </div>
-                    <div className={smallOrange}>
-                        <Transports/>
-                    </div>
-                    <div className={smallGreen}>
-                        <TodoList/>
-                    </div>
+                    <div className={smallGreen}><Meteo/></div>
+                    <div className={smallOrange}><Agenda/></div>
+                    <div className={largeGreen}><Money/></div>
+                    <div className={smallOrange}><Transports/></div>
+                    <div className={smallGreen}><TodoList/></div>
                 </div>
             </div>
         );
     }
 }
 
-export default connect(mapState)(App);
+export default connect(mapState, mapActions)(App);

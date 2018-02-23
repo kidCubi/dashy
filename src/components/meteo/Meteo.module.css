@@ -25,7 +25,7 @@
   position: relative; }
   .Heading:after {
     content: '';
-    position: absolute;
+    position: relative;
     width: 40%;
     height: 1px;
     background: #509A9B;

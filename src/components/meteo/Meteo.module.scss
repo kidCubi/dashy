@@ -17,7 +17,7 @@
   position: relative;
   &:after {
     content: '';
-    position: absolute;
+    position: relative;
     width: 40%;
     height: 1px;
     background: $c-green0;

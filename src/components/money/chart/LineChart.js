@@ -17,21 +17,15 @@ const LineChart = (props) => {
     });
 
     const x = d3.scaleTime()
-    .domain(d3.extent(props.data, function (d) {
-        return d.date;
-    }))
-    .range([0, w]);
-
+        .domain(d3.extent(props.data, function (d) {
+            return d.date;
+        })).range([0, w]);
     const y = d3.scaleLinear()
         .domain([0, d3.max(props.data, function (d) {
             return d.amount;
-        })])
-        .range([h, 0]);
-
+        })]).range([h, 0]);
     const yAxis = d3.axisLeft(y).ticks(3);
-
     const xAxis = d3.axisBottom(x).ticks(5);
-
     const line = d3.line()
         .x(function (d) {
             return x(d.date);
@@ -47,7 +41,7 @@ const LineChart = (props) => {
     });
 
     return (
-        <svg id={props.id} width={props.width} height={props.height} ref={(node) => {this.refSvgChart = node}}>
+        <svg id={props.id} width={props.width} height={props.height}>
             <g transform={transform}>
                 <Axis h={h} axis={yAxis} axisType="y"/>
                 <Axis h={h} axis={xAxis} axisType="x"/>

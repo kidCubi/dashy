@@ -3,8 +3,7 @@ import classNames from 'classnames';
 import styles from './App.scss';
 
 import Packery from 'packery';
-//Import Draggability from https://draggabilly.desandro.com/ as a custom script
-//Including a PR not in the current release
+//Import Draggability from https://draggabilly.desandro.com/ as a custom script including a PR not in the current release
 import Draggabilly from './vendors/Draggability';
 
 import Loading from './components/loading/Loading';

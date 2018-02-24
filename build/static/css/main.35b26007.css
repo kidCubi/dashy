@@ -591,7 +591,8 @@ html, body {
   display: flex;
   align-items: center;
   padding: 2.1vw 0;
-  border-bottom: 1px solid #509A9B; }
+  border-bottom: 1px solid #509A9B;
+  cursor: pointer; }
   .TodoList-module__TodoItem__1t6Yxg:first-of-type {
     padding-top: 0; }
   .TodoList-module__TodoItem__1t6Yxg:last-of-type {
@@ -615,7 +616,7 @@ html, body {
     position: absolute;
     content: '';
     left: 0;
-    top: 2vw;
+    top: 50%;
     width: 100%;
     height: 1px;
     background-color: #FCAB53;
@@ -655,6 +656,9 @@ html, body {
   color: #FFFFFF;
   margin: 0 8px;
   height: 483px; }
+  @media (max-width: 1250px) {
+    .Money-module__Wrapper__ZSM0S3 {
+      height: 250px; } }
   @media (max-width: 520px) {
     .Money-module__Wrapper__ZSM0S3 {
       height: 167px; } }
@@ -693,4 +697,4 @@ html, body {
   left: 2px;
   margin-right: 8px; }
 
-/*# sourceMappingURL=main.2130370a.css.map*/
+/*# sourceMappingURL=main.35b26007.css.map*/

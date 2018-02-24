@@ -46,8 +46,7 @@ class App extends Component {
                 //Enable drag
                 this.pckry.element.childNodes.forEach((item, index) => {
                     this.draggies.push(new Draggabilly(item, {
-                        containment: this.refMainGrid,
-                        columnWidth: 100
+                        containment: this.refMainGrid
                     }));
                     this.draggies[index].enable();
                     this.pckry.bindDraggabillyEvents(this.draggies[index]);

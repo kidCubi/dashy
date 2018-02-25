@@ -18,11 +18,13 @@ class Axis extends Component {
     renderAxis() {
         this.node = ReactDOM.findDOMNode(this);
         d3.select(this.node).call(this.props.axis);
+        d3.selectAll(".tick text")
+            .attr("y", -10);
         d3.selectAll(".tick line")
             .attr("stroke", "#FFFFFF")
-            .attr("y2", 30)
-            .attr("x1", 35)
-            .attr("x2", 35)
+            .attr("y2", 20)
+            .attr("x1", 50)
+            .attr("x2", 50);
     }
 
     render() {

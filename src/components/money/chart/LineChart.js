@@ -12,27 +12,35 @@ const LineChart = (props) => {
     let h = props.height - (margin.top + margin.bottom);
     const parseDate = d3.timeParse("%e-%b-%y");
 
-    props.data.forEach(function (d) {
+    props.data.forEach((d, index) => {
+        // if(index % 3 === 0) {
         d.date = parseDate(d.day);
+        // }
     });
 
     const x = d3.scaleTime()
-        .domain(d3.extent(props.data, function (d) {
+        .domain(d3.extent(props.data, (d) => {
             return d.date;
-        })).range([0, w]);
+        }))
+        .range([0, w]);
+
     const y = d3.scaleLinear()
-        .domain([0, d3.max(props.data, function (d) {
+        .domain([0, d3.max(props.data, (d) => {
             return d.amount;
-        })]).range([h, 0]);
+        })])
+        .range([h, 0]);
+
     const yAxis = d3.axisLeft(y).ticks(3);
-    const xAxis = d3.axisBottom(x).ticks(5);
+
+    const xAxis = d3.axisBottom(x).ticks(6);
+
     const line = d3.line()
-        .x(function (d) {
+        .x((d) => {
             return x(d.date);
         })
-        .y(function (d) {
+        .y((d) => {
             return y(d.amount);
-        }).curve(d3.curveCardinal);
+        }).curve(d3.curveCatmullRom.alpha(1));
 
     const transform = 'translate(' + margin.left + ',' + margin.top + ')';
 
@@ -41,7 +49,9 @@ const LineChart = (props) => {
     });
 
     return (
-        <svg id={props.id} width={props.width} height={props.height}>
+        <svg id={props.id} width={props.width} height={props.height} ref={(node) => {
+            this.refSvgChart = node
+        }}>
             <g transform={transform}>
                 <Axis h={h} axis={yAxis} axisType="y"/>
                 <Axis h={h} axis={xAxis} axisType="x"/>

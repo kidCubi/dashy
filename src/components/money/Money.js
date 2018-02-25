@@ -47,7 +47,7 @@ class Money extends Component {
     }
 
     raf() {
-        requestAnimationFrame(this.raf);
+        const tick = requestAnimationFrame(this.raf);
         if (this.isResizing) {
             this.setState(state => ({
                 width: this.refMoneyWrapper.getBoundingClientRect().width,

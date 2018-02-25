@@ -15,7 +15,7 @@
         // AMD
         define([
                 'get-size/get-size',
-                'unidragger/unidragger'
+                './unidragger/unidragger'
             ],
             function (getSize, Unidragger) {
                 return factory(window, getSize, Unidragger);

@@ -1,11 +1,19 @@
-@import '../../sass/helpers/mixins';
-@import '../../sass/helpers/variables';
-
+/* ========================================================================
+  GRADIENTS
+  ======================================================================= */
+/* ========================================================================
+   ASPECT RATIO
+   ======================================================================== */
+/**
+ * from https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+ */
+/* ========================================================================
+   BREAKPOINTS
+   ======================================================================== */
 .Wrapper {
-  color: $c-white;
+  color: #FFFFFF;
   margin: 0 8px;
-  padding: 6vw 0;
-}
+  padding: 6vw 0; }
 
 .Contact {
   display: flex;
@@ -15,14 +23,12 @@
   justify-content: center;
   width: 80%;
   height: 100%;
-  margin: auto;
-}
+  margin: auto; }
 
 .ContactItem {
   width: 50%;
   display: flex;
-  flex-direction: row;
-}
+  flex-direction: row; }
 
 .Avatar {
   height: 10vw;
@@ -30,19 +36,13 @@
   background-size: cover;
   border-radius: 50%;
   display: inline-block;
-  margin-right: 3vw;
-}
-
-.ContactInfos {
-}
+  margin-right: 3vw; }
 
 .Name {
-  display: inline-block;
-}
+  display: inline-block; }
 
 .ContactLinks {
-  margin-top: 1vw;
-}
+  margin-top: 1vw; }
 
 .Telephone {
   height: 4vw;
@@ -50,8 +50,7 @@
   margin-right: 3vw;
   display: inline-block;
   background: url("../../assets/svg/phoneIcon.svg") no-repeat center center;
-  background-size: cover;
-}
+  background-size: cover; }
 
 .Text {
   height: 3.5vw;
@@ -59,8 +58,7 @@
   margin-right: 3vw;
   display: inline-block;
   background: url("../../assets/svg/textIcon.svg") no-repeat center center;
-  background-size: cover;
-}
+  background-size: cover; }
 
 .Email {
   position: relative;
@@ -69,5 +67,4 @@
   width: 3.5vw;
   display: inline-block;
   background: url("../../assets/svg/emailIcon.svg") no-repeat center center;
-  background-size: cover;
-}
+  background-size: cover; }

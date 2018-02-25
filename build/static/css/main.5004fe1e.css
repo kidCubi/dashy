@@ -73,7 +73,14 @@ html, body {
 
 .App__GridItem__2M6rF4 {
   border-radius: 10px;
-  width: 48.91vw; }
+  width: calc(50vw - 5px);
+  height: 50vw; }
+  @media (max-width: 1250px) {
+    .App__GridItem__2M6rF4 {
+      height: 60vw; } }
+  @media (max-width: 520px) {
+    .App__GridItem__2M6rF4 {
+      height: 75vw; } }
 
 .App__GridItemLarge__2l3yIU {
   border-radius: 10px;
@@ -148,6 +155,46 @@ html, body {
 .Loading-module__HasLoaded__1wKzHU {
   transform: scale(1.2);
   opacity: 0; }
+/* ========================================================================
+  GRADIENTS
+  ======================================================================= */
+/* ========================================================================
+   ASPECT RATIO
+   ======================================================================== */
+/**
+ * from https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+ */
+/* ========================================================================
+   BREAKPOINTS
+   ======================================================================== */
+.Header-module__Wrapper__gRFE9r {
+  height: 80px;
+  width: 100%;
+  background: #011B2F;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+
+.Header-module__HeaderMenu__188Rep {
+  height: 18px;
+  width: 18px;
+  background: url(/static/media/menuIcon.03143cb4.svg) no-repeat;
+  background-position: center center;
+  background-size: cover; }
+
+.Header-module__HeaderIcon__39rfZH {
+  height: 55px;
+  width: 55px;
+  background: url(/static/media/dashy-icn.515f0e63.png) no-repeat;
+  background-position: center center;
+  background-size: cover; }
+
+.Header-module__DragTrigger__RGNO3t {
+  height: 15px;
+  width: 15px;
+  background: url(/static/media/plusSign.e47e2a84.svg) no-repeat;
+  background-position: center center;
+  background-size: cover; }
 /* ========================================================================
   GRADIENTS
   ======================================================================= */
@@ -251,46 +298,6 @@ html, body {
 /* ========================================================================
    BREAKPOINTS
    ======================================================================== */
-.Header-module__Wrapper__gRFE9r {
-  height: 80px;
-  width: 100%;
-  background: #011B2F;
-  display: flex;
-  align-items: center;
-  justify-content: space-around; }
-
-.Header-module__HeaderMenu__188Rep {
-  height: 18px;
-  width: 18px;
-  background: url(/static/media/menuIcon.03143cb4.svg) no-repeat;
-  background-position: center center;
-  background-size: cover; }
-
-.Header-module__HeaderIcon__39rfZH {
-  height: 55px;
-  width: 55px;
-  background: url(/static/media/dashy-icn.515f0e63.png) no-repeat;
-  background-position: center center;
-  background-size: cover; }
-
-.Header-module__DragTrigger__RGNO3t {
-  height: 15px;
-  width: 15px;
-  background: url(/static/media/plusSign.e47e2a84.svg) no-repeat;
-  background-position: center center;
-  background-size: cover; }
-/* ========================================================================
-  GRADIENTS
-  ======================================================================= */
-/* ========================================================================
-   ASPECT RATIO
-   ======================================================================== */
-/**
- * from https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
- */
-/* ========================================================================
-   BREAKPOINTS
-   ======================================================================== */
 .Meteo-module__Wrapper__247YLo {
   color: #FFFFFF;
   padding-bottom: 30px; }
@@ -301,8 +308,8 @@ html, body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 15px;
-  margin-bottom: 40px;
+  margin-top: 1vw;
+  margin-bottom: 10vw;
   position: relative; }
   .Meteo-module__Heading__2cvPMb:after {
     content: '';
@@ -338,7 +345,7 @@ html, body {
   justify-content: space-around;
   width: 80%;
   height: 4.67vw;
-  margin: 2px auto; }
+  margin: 2.5vw auto; }
   @media (max-width: 520px) {
     .Meteo-module__ForecastContainer__2wBcaZ {
       height: 5.5vw; } }
@@ -354,7 +361,7 @@ html, body {
   height: 25px;
   width: 25px;
   display: inline-block;
-  transform: scale(0.3); }
+  transform: scale(0.36); }
 
 .Meteo-module__Clear__HanSRc {
   height: 70px;
@@ -411,7 +418,7 @@ html, body {
   padding-bottom: 25px; }
 
 .Agenda-module__Heading__jGaAgG {
-  margin: 10px;
+  margin: 4vw 0 2vw 2vw;
   display: flex;
   align-items: center; }
 
@@ -513,8 +520,7 @@ html, body {
   padding-bottom: 30px; }
 
 .Transports-module__Heading__1Jt5ZY {
-  margin-top: 10px;
-  margin-bottom: 15px; }
+  margin: 3vw 0; }
   .Transports-module__Heading__1Jt5ZY span {
     display: inline-block;
     font-size: 6vw; }
@@ -567,25 +573,29 @@ html, body {
    BREAKPOINTS
    ======================================================================== */
 .TodoList-module__Wrapper__2WgcQN {
-  color: white;
   margin: 0 8px;
-  padding-bottom: 30px; }
+  padding-bottom: 30px;
+  color: white; }
 
 .TodoList-module__Heading__Yg4pNI {
-  margin-top: 10px;
-  margin-bottom: 15px; }
+  margin: 10px 0 15px 0; }
   .TodoList-module__Heading__Yg4pNI span {
     display: inline-block;
     font-size: 7vw; }
 
 .TodoList-module__HeadingIcon__FoHyx3 {
-  height: 5vw;
-  width: 5vw;
-  background: url(/static/media/checkIcon.f4f880fb.svg) no-repeat center center;
-  background-size: cover;
+  position: relative;
+  top: -1.7vw;
   margin-right: 5px;
-  top: 2px;
-  position: relative; }
+  width: 5vw;
+  height: 5vw;
+  background: url(/static/media/checkIcon.f4f880fb.svg) no-repeat center center;
+  background-size: cover; }
+
+.TodoList-module__CounterContainer__2qS1yc {
+  overflow: hidden;
+  display: inline-block;
+  font-size: 7vw; }
 
 .TodoList-module__TodoItem__1t6Yxg {
   display: flex;
@@ -603,34 +613,34 @@ html, body {
       padding: 3.6vw 0; } }
 
 .TodoList-module__CheckInput__2N5ttn {
+  display: inline-block;
+  margin-right: 10px;
   width: 5vw;
   height: 5vw;
-  margin-right: 10px;
   border: 1px solid #FFFFFF;
-  border-radius: 50%;
-  display: inline-block; }
+  border-radius: 50%; }
 
 .TodoList-module__TodoTask__3Vo4tv {
   position: relative; }
   .TodoList-module__TodoTask__3Vo4tv:after {
-    position: absolute;
     content: '';
-    left: 0;
-    top: 50%;
-    width: 100%;
-    height: 1px;
-    background-color: #FCAB53;
+    position: absolute;
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
+    top: 50%;
+    left: 0;
+    transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    width: 100%;
+    height: 1px;
+    background-color: #FCAB53; }
 
 .TodoList-module__isChecked__3mp2Pz span:first-of-type {
   background-color: #FCAB53; }
   .TodoList-module__isChecked__3mp2Pz span:first-of-type:before {
     content: '';
     position: absolute;
-    height: inherit;
     width: inherit;
+    height: inherit;
     background: url(/static/media/singleTick.e63ecbd5.svg) no-repeat center center;
     background-size: 60%; }
 
@@ -661,7 +671,7 @@ html, body {
       height: 250px; } }
   @media (max-width: 520px) {
     .Money-module__Wrapper__ZSM0S3 {
-      height: 167px; } }
+      height: 173px; } }
 
 .Money-module__Line__3oxLTY {
   fill: none;
@@ -696,5 +706,75 @@ html, body {
   top: 5px;
   left: 2px;
   margin-right: 8px; }
+/* ========================================================================
+  GRADIENTS
+  ======================================================================= */
+/* ========================================================================
+   ASPECT RATIO
+   ======================================================================== */
+/**
+ * from https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+ */
+/* ========================================================================
+   BREAKPOINTS
+   ======================================================================== */
+.Contacts-module__Wrapper__3ZIA37 {
+  color: #FFFFFF;
+  margin: 0 8px;
+  padding: 6vw 0; }
 
-/*# sourceMappingURL=main.35b26007.css.map*/
+.Contacts-module__Contact__2bxnIe {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+  margin: auto; }
+
+.Contacts-module__ContactItem__3UVDtM {
+  width: 50%;
+  display: flex;
+  flex-direction: row; }
+
+.Contacts-module__Avatar__q3gYxF {
+  height: 10vw;
+  width: 10vw;
+  background-size: cover;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 3vw; }
+
+.Contacts-module__Name__37faaR {
+  display: inline-block; }
+
+.Contacts-module__ContactLinks__30gdzS {
+  margin-top: 1vw; }
+
+.Contacts-module__Telephone__1e9I4z {
+  height: 4vw;
+  width: 3vw;
+  margin-right: 3vw;
+  display: inline-block;
+  background: url(/static/media/phoneIcon.dfec96aa.svg) no-repeat center center;
+  background-size: cover; }
+
+.Contacts-module__Text__2nHZd- {
+  height: 3.5vw;
+  width: 3.5vw;
+  margin-right: 3vw;
+  display: inline-block;
+  background: url(/static/media/textIcon.b410f468.svg) no-repeat center center;
+  background-size: cover; }
+
+.Contacts-module__Email__1S8Nsr {
+  position: relative;
+  top: -0.5vw;
+  height: 3vw;
+  width: 3.5vw;
+  display: inline-block;
+  background: url(/static/media/emailIcon.b7e7cde5.svg) no-repeat center center;
+  background-size: cover; }
+
+/*# sourceMappingURL=main.5004fe1e.css.map*/

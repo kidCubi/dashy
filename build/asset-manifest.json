@@ -1,19 +1,22 @@
 {
-  "main.css": "static/css/main.35b26007.css",
-  "main.css.map": "static/css/main.35b26007.css.map",
-  "main.js": "static/js/main.6586cab7.js",
-  "main.js.map": "static/js/main.6586cab7.js.map",
+  "main.css": "static/css/main.5004fe1e.css",
+  "main.css.map": "static/css/main.5004fe1e.css.map",
+  "main.js": "static/js/main.31924de0.js",
+  "main.js.map": "static/js/main.31924de0.js.map",
   "static/media/busIcon.svg": "static/media/busIcon.af41a8ab.svg",
   "static/media/calendar.svg": "static/media/calendar.2a427519.svg",
   "static/media/checkIcon.svg": "static/media/checkIcon.f4f880fb.svg",
   "static/media/clock.svg": "static/media/clock.ac131b2a.svg",
   "static/media/clouds.png": "static/media/clouds.911a5e91.png",
   "static/media/dashy-icn.png": "static/media/dashy-icn.515f0e63.png",
+  "static/media/emailIcon.svg": "static/media/emailIcon.b7e7cde5.svg",
   "static/media/menuIcon.svg": "static/media/menuIcon.03143cb4.svg",
   "static/media/moneyIcon.svg": "static/media/moneyIcon.37e5619f.svg",
+  "static/media/phoneIcon.svg": "static/media/phoneIcon.dfec96aa.svg",
   "static/media/plusSign.svg": "static/media/plusSign.e47e2a84.svg",
   "static/media/rain.png": "static/media/rain.64abd1f5.png",
   "static/media/singleTick.svg": "static/media/singleTick.e63ecbd5.svg",
   "static/media/snow.png": "static/media/snow.59104949.png",
-  "static/media/sun.png": "static/media/sun.3968f4ef.png"
+  "static/media/sun.png": "static/media/sun.3968f4ef.png",
+  "static/media/textIcon.svg": "static/media/textIcon.b410f468.svg"
 }

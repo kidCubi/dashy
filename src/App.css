@@ -73,7 +73,14 @@ html, body {
 
 .GridItem {
   border-radius: 10px;
-  width: 48.91vw; }
+  width: calc(50vw - 5px);
+  height: 50vw; }
+  @media (max-width: 1250px) {
+    .GridItem {
+      height: 60vw; } }
+  @media (max-width: 520px) {
+    .GridItem {
+      height: 75vw; } }
 
 .GridItemLarge {
   border-radius: 10px;

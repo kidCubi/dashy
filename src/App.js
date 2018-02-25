@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
+import animation from './App.animation';
 import styles from './App.scss';
 
 import Packery from 'packery';
@@ -7,13 +8,14 @@ import Packery from 'packery';
 import Draggabilly from './vendors/Draggability';
 
 import Loading from './components/loading/Loading';
-import Menu from './components/menu/Menu';
 import Header from './components/header/Header';
+import Menu from './components/menu/Menu';
 import Meteo from './components/meteo/Meteo';
 import Agenda from './components/agenda/Agenda';
 import Transports from './components/transports/Transports';
 import TodoList from './components/todoList/TodoList';
 import Money from './components/money/Money';
+import Contacts from './components/contacts/Contacts';
 
 import { connect } from 'react-redux';
 
@@ -37,6 +39,7 @@ class App extends Component {
         };
         this.initDraggableGrid = this.initDraggableGrid.bind(this);
         this.disableWidgetManagement = this.disableWidgetManagement.bind(this);
+        this.animateWidgetsIn = this.animateWidgetsIn.bind(this);
         this.raf = this.raf.bind(this);
     }
 
@@ -76,6 +79,11 @@ class App extends Component {
             draggieLoaded: true,
             hasLoaded: true
         }));
+        this.animateWidgetsIn();
+    }
+
+    animateWidgetsIn() {
+        animation.staggerShow(Object.values(this.refMainGrid.childNodes), 0.95, 0.09, 0.4);
     }
 
     disableWidgetManagement() {
@@ -84,10 +92,10 @@ class App extends Component {
 
     raf() {
         const tick = requestAnimationFrame(this.raf);
-        const allTrue = Object.keys(this.props.app.modulesLoaded).every(k => {
+        this.allTrue = Object.keys(this.props.app.modulesLoaded).every(k => {
             return this.props.app.modulesLoaded[k] === true;
         });
-        if (allTrue) {
+        if (this.allTrue) {
             this.initDraggableGrid();
             window.cancelAnimationFrame(tick);
         }
@@ -132,8 +140,10 @@ class App extends Component {
                     <div className={largeGreen}><Money/></div>
                     <div className={smallOrange}><Transports/></div>
                     <div className={smallGreen}><TodoList/></div>
+                    <div className={largeGreen}><Contacts/></div>
                 </div>
             </div>
+
         );
     }
 }

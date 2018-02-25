@@ -17,7 +17,14 @@ html, body {
 
 .GridItem {
   border-radius: 10px;
-  width: 48.91vw;
+  width: calc(50vw - 5px);
+  height: 50vw;
+  @include bp(tablet) {
+    height: 60vw;
+  }
+  @include bp(phone) {
+    height: 75vw;
+  }
 }
 
 .GridItemLarge {

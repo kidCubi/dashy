@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Easing, Tween, autoPlay } from 'es6-tween'
 
 import styles from './Menu.module.scss';
+import animation from './Menu.animation';
 import classNames from 'classnames';
 
 import { connect } from 'react-redux';
@@ -25,18 +25,9 @@ class Menu extends Component {
             y: 0,
             isClosing: false
         };
-        this.overlayAnimation = {
-            r: 0,
-            duration: 750
-        };
-        this.animate = this.animate.bind(this);
         this.openMenu = this.openMenu.bind(this);
         this.closeMenu = this.closeMenu.bind(this);
         this.manageWidgets = this.manageWidgets.bind(this);
-    }
-
-    componentDidMount() {
-        this.animate();
     }
 
     componentDidUpdate(prevProps) {
@@ -45,22 +36,12 @@ class Menu extends Component {
                 x: this.props.app.menu.overlay.x,
                 y: this.props.app.menu.overlay.y
             }));
-            if (this.props.app.menu.isOpen) {
-                this.openMenu();
-            } else  {
-                this.overlayAnimation.r = 0;
-            }
+            (this.props.app.menu.isOpen) ? this.openMenu() : this.closeMenu();
         }
     }
 
     openMenu() {
-        this.tweenOverlay = new Tween(this.overlayAnimation)
-            .to({ r: window.innerHeight * 1.5 }, this.overlayAnimation.duration)
-            .easing(Easing.Exponential.Out)
-            .on('update', () => {
-                this.refCircle.setAttribute('r', this.overlayAnimation.r.toString())
-            });
-        this.tweenOverlay.start();
+        animation.show(this.refCircle, 0.75);
     }
 
     closeMenu() {
@@ -70,6 +51,7 @@ class Menu extends Component {
         }));
         this.setState(state => ({ isClosing: true }));
         setTimeout(() => {
+            animation.hide(this.refCircle);
             this.setState(state => ({ isClosing: false }));
             this.props.setMenuOpenClose(false);
         }, 301)
@@ -78,11 +60,6 @@ class Menu extends Component {
     manageWidgets() {
         this.props.setDraggableWidgets(true);
         this.closeMenu();
-    }
-
-    animate() {
-        requestAnimationFrame(this.animate);
-        autoPlay(true);
     }
 
     render() {
@@ -111,7 +88,7 @@ class Menu extends Component {
                     <span onClick={this.manageWidgets} className={styles.MenuBtn}>Manage widgets</span>
                     {/*<span className={styles.MenuTitle}>Add a new widget</span>*/}
                     {/*<ul className={styles.MenuOption}>*/}
-                        {/*<li>Contacts</li>*/}
+                    {/*<li>Contacts</li>*/}
                     {/*</ul>*/}
                 </div>
             </div>

@@ -20,8 +20,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 15px;
-  margin-bottom: 40px;
+  margin-top: 1vw;
+  margin-bottom: 10vw;
   position: relative; }
   .Heading:after {
     content: '';
@@ -57,7 +57,7 @@
   justify-content: space-around;
   width: 80%;
   height: 4.67vw;
-  margin: 2px auto; }
+  margin: 2.5vw auto; }
   @media (max-width: 520px) {
     .ForecastContainer {
       height: 5.5vw; } }
@@ -73,7 +73,7 @@
   height: 25px;
   width: 25px;
   display: inline-block;
-  transform: scale(0.3); }
+  transform: scale(0.36); }
 
 .Clear {
   height: 70px;

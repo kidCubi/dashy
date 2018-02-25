@@ -7,6 +7,8 @@ import { LoadFonts } from "./configFonts";
 import configureStore from './redux/store/configureStore';
 import registerServiceWorker from './registerServiceWorker';
 
+document.title = "Dashy";
+
 const store = configureStore();
 
 if (window.addEventListener)

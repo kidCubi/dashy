@@ -3,6 +3,7 @@ export const SET_MONEY_LOADED = "SET_MONEY_LOADED";
 export const SET_AGENDA_LOADED = "SET_AGENDA_LOADED";
 export const SET_TRANSPORTS_LOADED = "SET_TRANSPORTS_LOADED";
 export const SET_TODO_LOADED = "SET_TODO_LOADED";
+export const SET_CONTACTS_LOADED = "SET_CONTACTS_LOADED";
 export const SET_MENU_OVERLAY_COORDINATES = "SET_MENU_OVERLAY_COORDINATES";
 export const SET_MENU_OPENCLOSE = "SET_MENU_OPENCLOSE";
 export const SET_DRAGGABLE_WIDGETS = "SET_DRAGGABLE_WIDGETS";
@@ -41,6 +42,14 @@ export function setTodoLoaded(loaded) {
         loaded
     }
 }
+
+export function setContactsLoaded(loaded) {
+    return {
+        type: SET_CONTACTS_LOADED,
+        loaded
+    }
+}
+
 
 export function setMenuOverlayCoordinates(x, y) {
     return {

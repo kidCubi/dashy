@@ -4,6 +4,7 @@ import {
     SET_AGENDA_LOADED,
     SET_TRANSPORTS_LOADED,
     SET_TODO_LOADED,
+    SET_CONTACTS_LOADED,
     SET_MENU_OVERLAY_COORDINATES,
     SET_MENU_OPENCLOSE,
     SET_DRAGGABLE_WIDGETS
@@ -16,6 +17,7 @@ const initialState = {
         agendaLoaded: false,
         transportsLoaded: false,
         todoLoaded: false,
+        contactsLoaded: false
     },
     widgets: {
         draggable: false
@@ -73,6 +75,15 @@ export default function (state = { ...initialState }, action) {
                 modulesLoaded: {
                     ...state.modulesLoaded,
                     todoLoaded: action.loaded
+                }
+            }
+        }
+        case SET_CONTACTS_LOADED: {
+            return {
+                ...state,
+                modulesLoaded: {
+                    ...state.modulesLoaded,
+                    contactsLoaded: action.loaded
                 }
             }
         }

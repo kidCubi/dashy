@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TodoListItem from './TodoListItem';
+import animation from './TodoList.animation';
 import styles from './TodoList.module.scss';
 
 import { connect } from 'react-redux';
@@ -36,11 +37,14 @@ class TodoList extends Component {
 
     checkItem(index) {
         this.todoItems[index].complete = !this.todoItems[index].complete;
-        this.setState(state => ({
-            count: this.todoItems.filter(s => {
-                return !s.complete;
-            }).length
-        }));
+        animation.show(this.refCounter, 0.1, () => {
+            this.setState(state => ({
+                count: this.todoItems.filter(s => {
+                    return !s.complete;
+                }).length
+            }));
+        });
+
     }
 
     render() {
@@ -53,7 +57,9 @@ class TodoList extends Component {
             <div className={styles.Wrapper}>
                 <div className={styles.Heading}>
                     <span className={styles.HeadingIcon}/>
-                    <span>{this.state.count} left</span>
+                    <div  className={styles.CounterContainer}>
+                        <span ref={node => this.refCounter = node}>{this.state.count}</span> left
+                    </div>
                 </div>
                 {this.props.children}
                 {this.props.app.modulesLoaded.todoLoaded && <ul> {items} </ul>}

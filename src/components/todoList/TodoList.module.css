@@ -23,12 +23,17 @@
 
 .HeadingIcon {
   position: relative;
-  top: 2px;
+  top: -1.7vw;
   margin-right: 5px;
   width: 5vw;
   height: 5vw;
   background: url("../../assets/svg/checkIcon.svg") no-repeat center center;
   background-size: cover; }
+
+.CounterContainer {
+  overflow: hidden;
+  display: inline-block;
+  font-size: 7vw; }
 
 .TodoItem {
   display: flex;

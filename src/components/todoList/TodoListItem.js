@@ -21,7 +21,7 @@ class TodoListItem extends Component {
         return (
             <li className={classes} onClick={this.checkTask}>
                 <span className={styles.CheckInput} aria-hidden="true"/>
-                <span className={styles.TodoTask}>  {this.props.item.value}</span>
+                <span className={styles.TodoTask}>{this.props.item.value}</span>
             </li>
         );
     }

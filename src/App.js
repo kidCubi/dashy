@@ -83,7 +83,9 @@ class App extends Component {
     }
 
     animateWidgetsIn() {
-        animation.staggerShow(Object.values(this.refMainGrid.childNodes), 0.95, 0.09, 0.4);
+        let nodesArr = [];
+        Object.keys(this.refMainGrid.childNodes).map(key => nodesArr.push(this.refMainGrid.childNodes[key]));
+        animation.staggerShow(nodesArr, 0.95, 0.09, 0.4);
     }
 
     disableWidgetManagement() {

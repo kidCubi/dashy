@@ -1,4 +1,4 @@
-import { TweenLite, TweenMax, Power3, TimelineLite } from 'gsap';
+import { TimelineLite } from 'gsap';
 
 export default {
     show(target, duration, callback1, callback2) {

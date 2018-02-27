@@ -1,3 +1,4 @@
+/* eslint-disable */
 /*!
  * Unipointer v2.1.0
  * base class for doing one thing with pointer event
@@ -12,7 +13,7 @@
   if ( typeof define == 'function' && define.amd ) {
     // AMD
     define( [
-      'ev-emitter/ev-emitter'
+      './ev-emitter/ev-emitter'
     ], function( EvEmitter ) {
       return factory( window, EvEmitter );
     });

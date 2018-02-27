@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 /*!
  * Unidragger v2.1.0
  * Draggable base class

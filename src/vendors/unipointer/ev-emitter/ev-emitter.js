@@ -1,3 +1,4 @@
+/* eslint-disable */
 /**
  * EvEmitter v1.0.3
  * Lil' event emitter

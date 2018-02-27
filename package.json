@@ -119,5 +119,6 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  }
+  },
+  "homepage": "https://dashy-yassine-prod.herokuapp.com"
 }
